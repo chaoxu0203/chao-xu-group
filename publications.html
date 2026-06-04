@@ -2,145 +2,46 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Publications - Chao Xu Group</title>
+<title>Publications - Chao Xu Research Group</title>
 
 <style>
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 30px;
-        background: #f6f7fb;
-        color: #222;
-    }
-
-    h1 {
-        color: #1f2a44;
-    }
-
-    /* Buttons */
-    .filter {
-        margin: 10px 0 20px 0;
-    }
-
-    .btn {
-        padding: 8px 14px;
-        margin-right: 8px;
-        border: none;
-        background: #1f2a44;
-        color: white;
-        border-radius: 6px;
-        cursor: pointer;
-    }
-
-    .btn:hover {
-        background: #2e3d63;
-    }
-
-    /* Paper box */
-    .paper {
-        background: white;
-        padding: 15px;
-        margin-bottom: 12px;
-        border-radius: 10px;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-        line-height: 1.5;
-    }
-
-    .year {
-        display: none;
-    }
-
-    a {
-        color: #1f2a44;
-        font-weight: bold;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    .name {
-        font-weight: bold;
-        text-decoration: underline;
-    }
-</style>
-
-<script>
-function showYear(year) {
-    let sections = document.getElementsByClassName("year");
-    for (let i = 0; i < sections.length; i++) {
-        sections[i].style.display = "none";
-    }
-    document.getElementById(year).style.display = "block";
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px;
+    background: #f6f7fb;
+    color: #222;
 }
-</script>
 
-</head>
+h1 {
+    color: #1f2a44;
+}
 
-<body>
+h2 {
+    margin-top: 40px;
+    color: #1f2a44;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
 
-<h1>Publications</h1>
+.paper {
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    line-height: 1.5;
+}
 
-<p>Selected publications from the Chao Xu Research Group.</p>
+.name {
+    font-weight: bold;
+    text-decoration: underline;
+}
 
-<div class="filter">
-    <button class="btn" onclick="showYear('y2026')">2026</button>
-    <button class="btn" onclick="showYear('y2025')">2025</button>
-    <button class="btn" onclick="showYear('y2024')">2024</button>
-    <button class="btn" onclick="showYear('yall')">All</button>
-</div>
+a {
+    color: #1f2a44;
+    font-weight: bold;
+    text-decoration: none;
+}
 
-<!-- 2026 -->
-<div id="y2026" class="year" style="display:block;">
-
-<div class="paper">
-5. Xueying Kong, Samson Afewerki, Yu Pan, Ping Huang, <span class="name">Chao Xu</span>*, Aqueous and Surfactant-Free Synthesis of Nanoscale Covalent Organic Frameworks, <i>Angewandte Chemie International Edition</i>, 2026.<br>
-<a href="https://onlinelibrary.wiley.com/doi/10.1002/anie.202523595" target="_blank">View Paper</a>
-</div>
-
-<div class="paper">
-6. Duan Li*, Tianhui Shi, Sirui Ran, Lei Zeng, <span class="name">Chao Xu</span>*, Rapid Sintering of Porous Organic Polymers, <i>Advanced Functional Materials</i>, 2026.<br>
-<a href="#">Link</a>
-</div>
-
-<div class="paper">
-7. Michelle Åhlén et al., <span class="name">Chao Xu</span>*, Biobased Porous Frameworks, <i>Chemical Science</i>, 2026.<br>
-<a href="#">Link</a>
-</div>
-
-</div>
-
-<!-- 2025 -->
-<div id="y2025" class="year">
-
-<div class="paper">
-10. Kasper Eliasson et al., <span class="name">Chao Xu</span>*, COF membranes, <i>JACS</i>, 2025.<br>
-<a href="#">Link</a>
-</div>
-
-<div class="paper">
-11. Michelle Åhlén et al., <span class="name">Chao Xu</span>*, Ambient COF synthesis, <i>Angewandte Chemie</i>, 2025.<br>
-<a href="#">Link</a>
-</div>
-
-</div>
-
-<!-- 2024 -->
-<div id="y2024" class="year">
-
-<div class="paper">
-13. Zhongqi Wu et al., <span class="name">Chao Xu</span>*, CO2 capture polymers, <i>Green Chemistry</i>, 2024.<br>
-<a href="#">Link</a>
-</div>
-
-</div>
-
-<!-- ALL -->
-<div id="yall" class="year">
-
-<p>Use year buttons above to filter publications.</p>
-
-</div>
-
-</body>
-</html>
+a:hover {
+    text-decoration:
