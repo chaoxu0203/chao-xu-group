@@ -46,7 +46,7 @@ body {
     font-weight: bold;
 }
 
-/* MAIN SPLIT LAYOUT */
+/* MAIN LAYOUT */
 .container {
     display: flex;
     gap: 20px;
@@ -55,7 +55,7 @@ body {
     padding: 10px;
 }
 
-/* LEFT SIDE */
+/* LEFT + RIGHT */
 .left {
     flex: 1;
 }
@@ -104,6 +104,22 @@ h2 {
     border-radius: 10px;
 }
 
+/* MORE LINK */
+.more-link {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.more-link a {
+    color: #1f2a44;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.more-link a:hover {
+    text-decoration: underline;
+}
+
 /* RESPONSIVE */
 @media (max-width: 1000px) {
     .container {
@@ -131,7 +147,7 @@ h2 {
     <a href="contact.html">Contact</a>
 </div>
 
-<!-- MAIN CONTENT -->
+<!-- MAIN -->
 <div class="container">
 
     <!-- LEFT: GROUP PHOTO -->
@@ -140,7 +156,7 @@ h2 {
         <img src="group_photo.jpg" alt="Group Photo" class="group-photo">
     </div>
 
-    <!-- RIGHT SIDE -->
+    <!-- RIGHT -->
     <div class="right">
 
         <!-- NEWS -->
@@ -148,21 +164,28 @@ h2 {
             <h2>News</h2>
 
             <div class="news-item">
-                <b>2026:</b> New paper in Angewandte Chemie on COF nanoparticles.
+                Chao and Michelle have received a Vinnova feasibility study grant within the Cirkularitet – FFI program, together with their industrial partner Catacon Recycling AB, focusing on the recycling of critical metals from end-of-life vehicles.
             </div>
 
             <div class="news-item">
-                <b>2026:</b> New grant from Swedish Research Council.
+                Chao attended MOF2026 in New Orleans and gave a talk on “Green and Scalable Routes for the Synthesis and Processing of Porous Organic Frameworks.”
             </div>
 
             <div class="news-item">
-                <b>2025:</b> COF membrane fabrication breakthrough.
+                Dr. Yi Yang has joined the group as a postdoctoral researcher. Welcome!
             </div>
 
             <div class="news-item">
-                <b>2025:</b> Group expansion with new PhD students.
+                Our invited Perspective on biobased porous organic polymers has been published in <i>Chemical Science</i>.
             </div>
 
+            <div class="news-item">
+                Our study on aqueous and surfactant-free synthesis of nanoscale covalent organic frameworks has been published in <i>Angewandte Chemie</i>.
+            </div>
+
+            <div class="more-link">
+                <a href="news.html">More →</a>
+            </div>
         </div>
 
         <!-- PUBLICATIONS -->
