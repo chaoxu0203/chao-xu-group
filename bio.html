@@ -42,34 +42,42 @@ a:hover {
     text-decoration: underline;
 }
 
-/* main layout */
-.profile {
+/* top layout */
+.top-section {
     display: flex;
     gap: 25px;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
-/* left column */
-.profile-left {
+/* left: photo + name */
+.left-block {
     width: 240px;
     text-align: center;
     flex-shrink: 0;
 }
 
-.profile-left img {
+.left-block img {
     width: 200px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-/* right column */
-.profile-right {
-    flex: 1;
-    line-height: 1.6;
+.name {
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #1f2a44;
 }
 
-.profile-right p {
-    margin: 0 0 10px 0;
+/* right: position */
+.right-block {
+    flex: 1;
+}
+
+.right-block .info-block {
+    margin-top: 0;
+    line-height: 1.6;
 }
 </style>
 </head>
@@ -78,63 +86,70 @@ a:hover {
 
 <h1>Biography</h1>
 
-<div class="info-block profile">
+<!-- TOP SECTION -->
+<div class="top-section">
 
-    <!-- LEFT COLUMN -->
-    <div class="profile-left">
+    <!-- LEFT: PHOTO + NAME -->
+    <div class="left-block">
         <img src="chao_xu_bio_photo.jpg" alt="Chao Xu">
+        <div class="name">Chao Xu</div>
+    </div>
 
-        <div style="margin-top:12px; line-height:1.4;">
+    <!-- RIGHT: CURRENT POSITION -->
+    <div class="right-block">
+
+        <div class="info-block">
             Associate Professor<br>
             Division of Nanotechnology and Functional Materials<br>
             Department of Materials Science and Engineering<br>
             Uppsala University, Sweden
         </div>
-    </div>
-
-    <!-- RIGHT COLUMN -->
-    <div class="profile-right">
-
-        <h2 style="margin-top:0;">Education & Career</h2>
-
-        <p>
-        Chao Xu earned his PhD in Materials Chemistry from Stockholm University in 2015 under the supervision of
-        <a href="https://www.su.se/profiles/n/nhedi" target="_blank">Prof. Niklas Hedin</a>.
-        </p>
-
-        <p>
-        Following a brief postdoctoral period in the same group, he joined Uppsala University in 2016 as a postdoctoral researcher under the supervision of
-        <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N94-2074" target="_blank">Prof. Maria Strømme</a>, and subsequently held a research position from 2018.
-        </p>
-
-        <p>
-        In 2021, he was appointed as a tenure-track Assistant Professor at Uppsala University and was promoted to Associate Professor in 2025.
-        He obtained his Docent degree in Engineering Science with specialization in Nanotechnology and Functional Materials in 2024.
-        </p>
-
-        <h2>Awards & Recognition</h2>
-
-        <ul>
-            <li>
-                <a href="https://www.kungahuset.se/download/18.44e3ea617a09053813324c/1623938811456/50-%C3%A5rsfonden%20utdelning%202017.pdf" target="_blank">
-                King Carl XVI Gustaf’s 50th Birthday Fund for Science, Technology, and the Environment
-                </a>
-            </li>
-            <li>
-                <a href="https://gustafssonsstiftelser.se/chao-xu-teknisk-fysik-uu/" target="_blank">
-                Göran Gustafsson Prize (UU/KTH)
-                </a>
-            </li>
-        </ul>
-
-        <h2>Research Interests</h2>
-        <p>
-        Functional porous materials including covalent organic frameworks (COFs), metal-organic frameworks (MOFs),
-        and porous organic polymers (POPs) for applications in energy storage, carbon capture, catalysis, and environmental remediation.
-        </p>
 
     </div>
 
+</div>
+
+<!-- EDUCATION -->
+<h2>Education & Career</h2>
+<div class="info-block">
+<p>
+Chao Xu earned his PhD in Materials Chemistry from Stockholm University in 2015 under the supervision of
+<a href="https://www.su.se/profiles/n/nhedi" target="_blank">Prof. Niklas Hedin</a>.
+</p>
+
+<p>
+Following a brief postdoctoral period in the same group, he joined Uppsala University in 2016 as a postdoctoral researcher under the supervision of
+<a href="https://www.uu.se/en/contact-and-organisation/staff?query=N94-2074" target="_blank">Prof. Maria Strømme</a>, and subsequently held a research position from 2018.
+</p>
+
+<p>
+In 2021, he was appointed as a tenure-track Assistant Professor at Uppsala University and was promoted to Associate Professor in 2025.
+He obtained his Docent degree in Engineering Science with specialization in Nanotechnology and Functional Materials in 2024.
+</p>
+</div>
+
+<!-- AWARDS -->
+<h2>Awards & Recognition</h2>
+<div class="info-block">
+<ul>
+    <li>
+        <a href="https://www.kungahuset.se/download/18.44e3ea617a09053813324c/1623938811456/50-%C3%A5rsfonden%20utdelning%202017.pdf" target="_blank">
+        King Carl XVI Gustaf’s 50th Birthday Fund for Science, Technology, and the Environment
+        </a>
+    </li>
+    <li>
+        <a href="https://gustafssonsstiftelser.se/chao-xu-teknisk-fysik-uu/" target="_blank">
+        Göran Gustafsson Prize (UU/KTH)
+        </a>
+    </li>
+</ul>
+</div>
+
+<!-- RESEARCH -->
+<h2>Research Interests</h2>
+<div class="info-block">
+Functional porous materials including covalent organic frameworks (COFs), metal-organic frameworks (MOFs),
+and porous organic polymers (POPs) for applications in energy storage, carbon capture, catalysis, and environmental remediation.
 </div>
 
 </body>
