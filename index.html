@@ -16,100 +16,88 @@ body {
 .header {
     background: #1f2a44;
     color: white;
-    padding: 40px 20px;
+    padding: 35px 20px;
     text-align: center;
 }
 
 .header h1 {
     margin: 0;
-    font-size: 36px;
+    font-size: 34px;
 }
 
 .header p {
-    margin-top: 10px;
-    font-size: 18px;
+    margin-top: 8px;
+    font-size: 17px;
     opacity: 0.9;
 }
 
 /* NAV */
 .nav {
     background: #ffffff;
-    padding: 15px;
+    padding: 12px;
     text-align: center;
     border-bottom: 1px solid #ddd;
 }
 
 .nav a {
-    margin: 0 15px;
+    margin: 0 14px;
     text-decoration: none;
     color: #1f2a44;
     font-weight: bold;
 }
 
-/* MAIN CONTAINER */
+/* MAIN LAYOUT */
 .container {
-    max-width: 1100px;
-    margin: 30px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    gap: 18px;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 10px;
 }
 
-/* SECTION TITLES */
+/* BOX STYLE */
+.box {
+    background: white;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* SECTION TITLE */
 h2 {
+    font-size: 18px;
     color: #1f2a44;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #eee;
     padding-bottom: 5px;
-    margin-top: 35px;
+    margin-top: 0;
 }
 
 /* GROUP PHOTO */
 .group-photo {
     width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-    margin-top: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
 /* NEWS */
 .news-item {
-    padding: 10px 0;
+    padding: 8px 0;
     border-bottom: 1px solid #eee;
+    font-size: 14px;
 }
 
-/* PUBLICATIONS GRID */
-.paper-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.paper-card {
-    padding: 0;
-    background: none;
-}
-
-/* PUBLICATION IMAGES */
-.paper-card img {
+/* PUBLICATION IMAGE */
+.paper-img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    transition: transform 0.2s ease;
 }
 
-.paper-card img:hover {
-    transform: scale(1.03);
-}
-
-/* FOOTER */
-.footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    color: #777;
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
@@ -132,48 +120,48 @@ h2 {
     <a href="contact.html">Contact</a>
 </div>
 
+<!-- 3 COLUMN LAYOUT -->
 <div class="container">
 
-    <!-- GROUP PHOTO -->
-    <h2>Our Group</h2>
-    <img src="group_photo.jpg" alt="Group Photo" class="group-photo">
-
-    <!-- NEWS -->
-    <h2>News</h2>
-
-    <div class="news-item">
-        <b>2026:</b> Chao and Michelle have received a Vinnova feasibility study grant within the Cirkularitet – FFI program, together with their industrial partner Catacon Recycling AB, focusing on the recycling of critical metals from end-of-life vehicles.
+    <!-- LEFT: GROUP PHOTO -->
+    <div class="box">
+        <h2>Our Group</h2>
+        <img src="group_photo.jpg" class="group-photo" alt="Group Photo">
     </div>
 
-    <div class="news-item">
-        <b>2026:</b> Chao attended MOF2026 in New Orleans and gave an talk on “Green and Scalable Routes for the Synthesis and Processing of Porous Organic Frameworks.”
+    <!-- CENTER: NEWS -->
+    <div class="box">
+        <h2>News</h2>
+
+        <div class="news-item">
+            <b>2026:</b> New paper in Angewandte Chemie on COF nanoparticles.
+        </div>
+
+        <div class="news-item">
+            <b>2026:</b> New grant from Swedish Research Council.
+        </div>
+
+        <div class="news-item">
+            <b>2025:</b> COF membrane fabrication breakthrough.
+        </div>
+
+        <div class="news-item">
+            <b>2025:</b> Group expansion with new PhD students.
+        </div>
+
     </div>
 
-    <div class="news-item">
-        <b>2026:</b> Dr. Yi Yang has joined the group as a postdoctoral fellow. Welcome!
+    <!-- RIGHT: HIGHLIGHTS -->
+    <div class="box">
+        <h2>Featured Work</h2>
+
+        <img src="papers.jpg" class="paper-img" alt="Featured Publications">
+
+        <p style="font-size:13px; margin-top:10px; color:#555;">
+            Selected research highlights from COFs, MOFs and porous organic polymers.
+        </p>
     </div>
 
-    <div class="news-item">
-        <b>2026:</b> Our invited Perspective on biobased porous organic polymers has been published in Chemical Science.
-    </div>
-
-    <!-- FEATURED PUBLICATIONS -->
-   <h2>Featured Publications</h2>
-
-<div>
-    <img src="papers.jpg" alt="Featured Publications" style="
-        width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-        margin-top: 15px;
-    ">
-</div>
-
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-    © 2026 Chao Xu Research Group
 </div>
 
 </body>
