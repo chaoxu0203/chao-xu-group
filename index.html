@@ -1,99 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Chao Xu's Research Group</title>
+<meta charset="UTF-8">
+<title>Chao Xu Research Group</title>
 
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            background: #f6f7fb;
-            color: #222;
-        }
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #f6f7fb;
+    color: #222;
+}
 
-        .header {
-            background: #1f2a44;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
+/* HEADER */
+.header {
+    background: #1f2a44;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
 
-        .header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+}
 
-        .header p {
-            margin-top: 10px;
-            font-size: 18px;
-            opacity: 0.9;
-        }
+.header p {
+    margin-top: 10px;
+    font-size: 18px;
+    opacity: 0.9;
+}
 
-        .nav {
-            background: #ffffff;
-            padding: 15px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
+/* NAV */
+.nav {
+    background: #ffffff;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
 
-        .nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #1f2a44;
-            font-weight: bold;
-        }
+.nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #1f2a44;
+    font-weight: bold;
+}
 
-        .container {
-            max-width: 1000px;
-            margin: 30px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-        }
+/* MAIN CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
 
-        h2 {
-            border-left: 5px solid #1f2a44;
-            padding-left: 10px;
-            margin-top: 30px;
-        }
+/* SECTION TITLES */
+h2 {
+    color: #1f2a44;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 35px;
+}
 
-        .footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #777;
-        }
-    </style>
+/* GROUP PHOTO */
+.group-photo {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    margin-top: 20px;
+}
+
+/* NEWS */
+.news-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* PUBLICATIONS GRID */
+.paper-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.paper-card {
+    padding: 0;
+    background: none;
+}
+
+/* PUBLICATION IMAGES */
+.paper-card img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: transform 0.2s ease;
+}
+
+.paper-card img:hover {
+    transform: scale(1.03);
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #777;
+}
+</style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <div class="header">
-    <h1>Chao Xu's Research Group</h1>
+    <h1>Chao Xu Research Group</h1>
     <p>@Uppsala University on Functional Porous Materials</p>
 </div>
 
+<!-- NAV -->
 <div class="nav">
     <a href="index.html">Home</a>
     <a href="research.html">Research</a>
-    <a href="bio.html">Bio</a>
     <a href="team.html">Team</a>
     <a href="publications.html">Publications</a>
+    <a href="bio.html">Bio</a>
     <a href="contact.html">Contact</a>
 </div>
 
 <div class="container">
 
-    <h2>Welcome</h2>
-    <p>
-        Our research focuses on the green synthesis and engineering of porous materials, including metal-organic frameworks (MOFs), covalent organic frameworks (COFs), and porous organic polymers (POPs), for energy and environmental applications.
-    </p>
-    
+    <!-- GROUP PHOTO -->
+    <h2>Our Group</h2>
+    <img src="group_photo.jpg" alt="Group Photo" class="group-photo">
+
+    <!-- NEWS -->
+    <h2>News</h2>
+
+    <div class="news-item">
+        <b>2026:</b> New paper accepted in Angewandte Chemie on COF nanoparticles.
+    </div>
+
+    <div class="news-item">
+        <b>2026:</b> Received new grant from Swedish Research Council.
+    </div>
+
+    <div class="news-item">
+        <b>2025:</b> Successful development of COF membrane fabrication.
+    </div>
+
+    <div class="news-item">
+        <b>2025:</b> Group expanded with new PhD students and postdocs.
+    </div>
+
+    <!-- FEATURED PUBLICATIONS -->
+    <h2>Featured Publications</h2>
+
+    <div class="paper-grid">
+
+        <div class="paper-card">
+            <img src="paper1.jpg" alt="Paper 1">
+        </div>
+
+        <div class="paper-card">
+            <img src="paper2.jpg" alt="Paper 2">
+        </div>
+
+        <div class="paper-card">
+            <img src="paper3.jpg" alt="Paper 3">
+        </div>
+
+        <div class="paper-card">
+            <img src="paper4.jpg" alt="Paper 4">
+        </div>
+
+    </div>
+
 </div>
 
+<!-- FOOTER -->
 <div class="footer">
-    © 2026 Chao Xu's Research Group
+    © 2026 Chao Xu Research Group
 </div>
 
 </body>
