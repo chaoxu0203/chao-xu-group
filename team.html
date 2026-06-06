@@ -1,36 +1,186 @@
-<div class="box">
-    <h2>Researcher</h2>
-    <div class="person">
-        <a href="https://www.uu.se/kontakt-och-organisation/personal?query=N17-115" target="_blank">
-            Dr. Michelle Åhlén
-        </a><br>
-        <span class="degree">PhD, 2021, Uppsala University</span>
-    </div>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Team - Chao Xu Research Group</title>
+
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #f6f7fb;
+    color: #222;
+}
+
+/* HEADER */
+.header {
+    background: #1f2a44;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+/* NAV */
+.nav {
+    background: white;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #1f2a44;
+    font-weight: bold;
+}
+
+/* MAIN LAYOUT */
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 10px;
+}
+
+/* LEFT PHOTO */
+.left {
+    flex: 1;
+}
+
+.group-photo {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+/* RIGHT CONTENT */
+.right {
+    flex: 1.2;
+}
+
+/* BOX STYLE */
+.box {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
+}
+
+/* HEADINGS */
+h2 {
+    color: #1f2a44;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+/* PERSON TEXT */
+.person {
+    margin-left: 10px;
+    line-height: 1.6;
+}
+
+/* LINKS */
+.person a {
+    color: #1f2a44;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.person a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>Team</h1>
 </div>
 
-<div class="box">
-    <h2>Postdoctor</h2>
-    <div class="person">
-        <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N17-2175" target="_blank">
-            Dr. Xueying Kong
-        </a><br>
-        <span class="degree">PhD, 2024, Uppsala University</span>
-
-        <br><br>
-
-        <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N26-99" target="_blank">
-            Dr. Yi Yang
-        </a><br>
-        <span class="degree">PhD, 2025, Fudan University</span>
-    </div>
+<!-- NAV -->
+<div class="nav">
+    <a href="index.html">Home</a>
+    <a href="bio.html">Bio</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="team.html">Team</a>
+    <a href="contact.html">Contact</a>
 </div>
 
-<div class="box">
-    <h2>PhD Student</h2>
-    <div class="person">
-        <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N24-2422" target="_blank">
-            Zixuan Ding
-        </a><br>
-        <span class="degree">MS, 2024, KTH Royal Institute of Technology</span>
+<!-- MAIN -->
+<div class="container">
+
+    <!-- LEFT: PHOTO -->
+    <div class="left">
+        <img src="group_photo.jpg" alt="Group Photo" class="group-photo">
     </div>
+
+    <!-- RIGHT: TEAM -->
+    <div class="right">
+
+        <div class="box">
+            <h2>Principal Investigator</h2>
+            <div class="person">
+                <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N16-1826" target="_blank">
+                    Assoc. Prof. Chao Xu
+                </a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>Researcher</h2>
+            <div class="person">
+                <a href="https://www.uu.se/kontakt-och-organisation/personal?query=N17-115" target="_blank">
+                    Dr. Michelle Åhlén
+                </a>
+                (PhD, 2021, Uppsala University)
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>Postdoctor</h2>
+            <div class="person">
+                <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N17-2175" target="_blank">
+                    Dr. Xueying Kong
+                </a>
+                (PhD, 2024, Uppsala University)
+                <br>
+
+                <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N26-99" target="_blank">
+                    Dr. Yi Yang
+                </a>
+                (PhD, 2025, Fudan University)
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>PhD Student</h2>
+            <div class="person">
+                <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N24-2422" target="_blank">
+                    Zixuan Ding
+                </a>
+                (MS, 2024, KTH Royal Institute of Technology)
+            </div>
+        </div>
+
+    </div>
+
 </div>
+
+</body>
+</html>
+```
