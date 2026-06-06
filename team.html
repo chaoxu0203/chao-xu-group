@@ -44,7 +44,7 @@ body {
     padding: 10px;
 }
 
-/* LEFT PHOTO AREA */
+/* LEFT PHOTO */
 .left {
     flex: 1;
 }
@@ -77,15 +77,21 @@ h2 {
     margin-top: 0;
 }
 
-/* ROLE STYLE */
-.role-title {
-    font-weight: bold;
-    margin-top: 10px;
-}
-
+/* PERSON TEXT */
 .person {
     margin-left: 10px;
     line-height: 1.6;
+}
+
+/* LINKS (clean style, no bold, no blue default look) */
+.person a {
+    color: #1f2a44;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.person a:hover {
+    text-decoration: underline;
 }
 
 /* RESPONSIVE */
@@ -116,40 +122,51 @@ h2 {
 <!-- MAIN -->
 <div class="container">
 
-    <!-- LEFT: PHOTO SPACE -->
+    <!-- LEFT: PHOTO -->
     <div class="left">
         <img src="group_photo.jpg" alt="Group Photo" class="group-photo">
     </div>
 
-    <!-- RIGHT: TEAM INFO -->
+    <!-- RIGHT: TEAM -->
     <div class="right">
 
         <div class="box">
             <h2>Principal Investigator</h2>
             <div class="person">
-                Assoc. Prof. Chao Xu
+                <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N16-1826" target="_blank">
+                    Assoc. Prof. Chao Xu
+                </a>
             </div>
         </div>
 
         <div class="box">
             <h2>Researcher</h2>
             <div class="person">
-                Dr. Michelle Åhlén
+                <a href="https://www.uu.se/kontakt-och-organisation/personal?query=N17-115" target="_blank">
+                    Dr. Michelle Åhlén
+                </a>
             </div>
         </div>
 
         <div class="box">
             <h2>Postdoctoral Researchers</h2>
             <div class="person">
-                Dr. Xueying Kong<br>
-                Dr. Yi Yang
+                <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N17-2175" target="_blank">
+                    Dr. Xueying Kong
+                </a><br>
+
+                <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N26-99" target="_blank">
+                    Dr. Yi Yang
+                </a>
             </div>
         </div>
 
         <div class="box">
             <h2>PhD Student</h2>
             <div class="person">
-                Zixuan Ding
+                <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N24-2422" target="_blank">
+                    Zixuan Ding
+                </a>
             </div>
         </div>
 
