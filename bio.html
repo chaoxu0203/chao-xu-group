@@ -104,6 +104,25 @@ h2 {
 ul {
     line-height: 1.7;
 }
+
+/* ===== GRANTS GRID ===== */
+.grants-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 25px;
+    margin-top: 10px;
+}
+
+.grant-item {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+    .grants-grid {
+        grid-template-columns: 1fr;
+    }
+}
 </style>
 </head>
 
@@ -187,6 +206,31 @@ ul {
             <p>
             Chao Xu has received several research grants from the Swedish Research Council, Formas, the Swedish Energy Agency, Vinnova, STINT, the Göran Gustafsson Foundation, and the ÅForsk Foundation, with a total amount of approximately 25 MSEK as principal investigator.
             </p>
+
+            <!-- NEW GRANTS GRID -->
+            <div class="grants-grid">
+
+                <div class="grant-item">2026–2027 Vinnova Project Grant, 0.5M SEK (PI)</div>
+                <div class="grant-item">2024–2027 ÅForsk Research Grant, 1.9M SEK (PI)</div>
+
+                <div class="grant-item">2024–2027 Swedish Research Council Starting Grant, 4M SEK (PI)</div>
+                <div class="grant-item">2024–2027 Formas Grant for Early-Career Researchers, 4M SEK (PI)</div>
+
+                <div class="grant-item">2024–2026 Göran Gustafsson Prize, 3.6M SEK (PI)</div>
+                <div class="grant-item">2023–2025 Vinnova Project Grant, 2M SEK (PI)</div>
+
+                <div class="grant-item">2023–2026 Swedish Energy Agency Project Grant, 4M SEK (PI)</div>
+                <div class="grant-item">2022–2025 ÅForsk Research Grant, 1M SEK (PI)</div>
+
+                <div class="grant-item">2022–2023 STINT Initiation Grant, 150k SEK (PI)</div>
+                <div class="grant-item">2021–2025 Start-up grant from Uppsala University, 0.5M SEK (PI)</div>
+
+                <div class="grant-item">2019–2022 ÅForsk Research Grant, 2M SEK (PI)</div>
+                <div class="grant-item">2018–2019 ÅForsk Research Grant, 0.5M SEK (PI)</div>
+
+                <div class="grant-item">2017–2018 STINT Initiation Grant, 150k SEK (PI)</div>
+
+            </div>
 
         </div>
 
