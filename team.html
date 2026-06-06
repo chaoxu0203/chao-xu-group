@@ -1,156 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Team - Chao Xu Research Group</title>
+<div class="team-section">
 
-<style>
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background: #f6f7fb;
-    color: #222;
-}
-
-/* HEADER */
-.header {
-    background: #1f2a44;
-    color: white;
-    padding: 25px;
-    text-align: center;
-}
-
-/* NAV */
-.nav {
-    background: white;
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-}
-
-.nav a {
-    margin: 0 12px;
-    text-decoration: none;
-    color: #1f2a44;
-    font-weight: bold;
-}
-
-/* GRID */
-.container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 25px;
-    max-width: 1100px;
-    margin: 25px auto;
-    padding: 10px;
-}
-
-/* LEFT: TEAM */
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-/* MEMBER CARD */
-.member {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-    padding: 15px;
-    text-align: center;
-}
-
-/* PHOTO */
-.member img {
-    width: 140px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    margin-bottom: 10px;
-}
-
-/* TEXT */
-.member h2 {
-    margin: 8px 0 6px 0;
-    font-size: 16px;
-    color: #1f2a44;
-}
-
-.member p {
-    margin: 4px 0;
-    line-height: 1.4;
-}
-
-/* LINKS */
-a {
-    color: #1f2a44;
-    text-decoration: none;
-    font-weight: normal;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* RIGHT: ALUMNI */
-.alumni {
-    background: white;
-    padding: 16px;
-    border-radius: 10px;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 20px;
-    line-height: 1.7;
-}
-
-.alumni h2 {
-    margin-top: 0;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .alumni {
-        position: static;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<div class="header">
-    <h1>Team</h1>
-</div>
-
-<div class="nav">
-    <a href="index.html">Home</a>
-    <a href="bio.html">Bio</a>
-    <a href="research.html">Research</a>
-    <a href="publications.html">Publications</a>
-    <a href="team.html">Team</a>
-    <a href="contact.html">Contact</a>
-</div>
-
-<div class="container">
-
-    <!-- LEFT: TEAM (PHOTO + TEXT TOGETHER) -->
-    <div class="team-grid">
-
+    <!-- Row 1 -->
+    <div class="member-row single">
         <div class="member">
             <img src="chao.jpg">
             <h2>Principal Investigator</h2>
             Assoc. Prof. Chao Xu
         </div>
+    </div>
 
+    <!-- Row 2 -->
+    <div class="member-row">
         <div class="member">
             <img src="michelle.jpg">
             <h2>Researcher</h2>
@@ -163,7 +23,14 @@ a:hover {
             <h2>Postdoctor</h2>
             Dr. Xueying Kong<br>
             (PhD 2024, Uppsala University)
-            <br><br>
+        </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="member-row">
+        <div class="member">
+            <img src="yiyang.jpg">
+            <h2>Postdoctor</h2>
             Dr. Yi Yang<br>
             (PhD 2025, Fudan University)
         </div>
@@ -174,26 +41,6 @@ a:hover {
             Zixuan Ding<br>
             (MS 2024, KTH Royal Institute of Technology)
         </div>
-
-    </div>
-
-    <!-- RIGHT: ALUMNI -->
-    <div class="alumni">
-        <h2>Alumni</h2>
-
-        Dr. Shengyang Zhou (PhD 2018–2021, PI @ Sichuan University)<br><br>
-        Dr. Xueying Kong (PhD 2020–2024, Postdoc @ Uppsala University)<br><br>
-        Dr. Kasper Eliasson (PhD 2021–2025)<br><br>
-        Dr. Samson Afewerki (Researcher 2024–2025, PI @ UAE University)<br><br>
-        Yu Pan (Visiting PhD 2023–2024)<br><br>
-        Shan Jiang (Visiting PhD 2023–2024)<br><br>
-        Simanjit Singh (MSc 2022)<br><br>
-        Beyar Abdulla (MSc 2020)<br><br>
-        Viktor Sanderyd (MSc 2018)
-
     </div>
 
 </div>
-
-</body>
-</html>
