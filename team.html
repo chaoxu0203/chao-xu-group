@@ -55,9 +55,12 @@ body {
     box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
 
-/* RIGHT CONTENT */
+/* RIGHT CONTENT (NOW GRID) */
 .right {
     flex: 1.2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
 }
 
 /* BOX STYLE */
@@ -66,7 +69,6 @@ body {
     padding: 18px;
     border-radius: 10px;
     box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-    margin-bottom: 15px;
 }
 
 /* HEADINGS */
@@ -80,7 +82,8 @@ h2 {
 /* PERSON TEXT */
 .person {
     margin-left: 10px;
-    line-height: 1.6;
+    line-height: 1.4;
+    margin-bottom: 6px;
 }
 
 /* LINKS */
@@ -94,10 +97,23 @@ h2 {
     text-decoration: underline;
 }
 
+/* ALUMNI FULL WIDTH */
+.full {
+    grid-column: span 2;
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
     .container {
         flex-direction: column;
+    }
+
+    .right {
+        grid-template-columns: 1fr;
+    }
+
+    .full {
+        grid-column: span 1;
     }
 }
 </style>
@@ -123,12 +139,12 @@ h2 {
 <!-- MAIN -->
 <div class="container">
 
-    <!-- LEFT: PHOTO -->
+    <!-- LEFT PHOTO -->
     <div class="left">
         <img src="group_photo.jpg" alt="Group Photo" class="group-photo">
     </div>
 
-    <!-- RIGHT: TEAM -->
+    <!-- RIGHT CONTENT -->
     <div class="right">
 
         <div class="box">
@@ -146,7 +162,7 @@ h2 {
                 <a href="https://www.uu.se/kontakt-och-organisation/personal?query=N17-115" target="_blank">
                     Dr. Michelle Åhlén
                 </a>
-                (PhD, 2021, Uppsala University)
+                (PhD 2021, Uppsala University)
             </div>
         </div>
 
@@ -156,13 +172,12 @@ h2 {
                 <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N17-2175" target="_blank">
                     Dr. Xueying Kong
                 </a>
-                (PhD, 2024, Uppsala University)
-                <br>
-
+                (PhD 2024, Uppsala University)
+                <br><br>
                 <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N26-99" target="_blank">
                     Dr. Yi Yang
                 </a>
-                (PhD, 2025, Fudan University)
+                (PhD 2025, Fudan University)
             </div>
         </div>
 
@@ -172,79 +187,57 @@ h2 {
                 <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N24-2422" target="_blank">
                     Zixuan Ding
                 </a>
-                (MS, 2024, KTH Royal Institute of Technology)
+                (MS 2024, KTH Royal Institute of Technology)
             </div>
         </div>
 
-        <!-- ================= ALUMNI ================= -->
-        <div class="box">
+        <!-- ALUMNI FULL WIDTH -->
+        <div class="box full">
             <h2>Alumni</h2>
 
             <div class="person">
                 <a href="https://mse.scu.edu.cn/info/1017/6725.htm" target="_blank">
                     Dr. Shengyang Zhou
                 </a>
-                (PhD student, 2018-2021, now PI @ Sichuan University)
+                (PhD 2018–2021, PI @ Sichuan University)
             </div>
-
-            <br>
 
             <div class="person">
                 <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N17-2175" target="_blank">
                     Dr. Xueying Kong
                 </a>
-                (PhD student, 2020-2024, now postdoc @ Uppsala University)
+                (PhD 2020–2024, Postdoc @ Uppsala University)
             </div>
-
-            <br>
 
             <div class="person">
-                Dr. Kasper Eliasson
-                (PhD student, 2021-2025)
+                Dr. Kasper Eliasson (PhD 2021–2025)
             </div>
-
-            <br>
 
             <div class="person">
                 <a href="https://research.uaeu.ac.ae/en/persons/samson-afewerki/" target="_blank">
                     Dr. Samson Afewerki
                 </a>
-                (Researcher, 2024–2025, now PI @ United Arab Emirates University)
+                (Researcher 2024–2025, PI @ UAE University)
             </div>
 
-            <br>
-
             <div class="person">
-                Yu Pan
-                (Visiting PhD student, Chinese Academy of Sciences, 2023–2024)
+                Yu Pan (Visiting PhD, CAS 2023–2024)
             </div>
 
-            <br>
-
             <div class="person">
-                Shan Jiang
-                (Visiting PhD student, Nanjing Forestry University, 2023–2024)
+                Shan Jiang (Visiting PhD, Nanjing Forestry University 2023–2024)
             </div>
 
-            <br>
-
             <div class="person">
-                Simanjit Singh
-                (Master student, 2022)
+                Simanjit Singh (MSc 2022)
             </div>
 
-            <br>
-
             <div class="person">
-                Beyar Abdulla
-                (Master student, 2020)
+                Beyar Abdulla (MSc 2020)
             </div>
 
-            <br>
-
             <div class="person">
-                Viktor Sanderyd
-                (Master student, 2018)
+                Viktor Sanderyd (MSc 2018)
             </div>
 
         </div>
