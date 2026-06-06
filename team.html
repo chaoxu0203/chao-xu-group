@@ -35,23 +35,36 @@ body {
     font-weight: bold;
 }
 
-/* MAIN LAYOUT */
+/* MAIN */
 .container {
-    display: grid;
-    grid-template-columns: 0.95fr 1.3fr 1.1fr;
-    gap: 22px;
     max-width: 1200px;
     margin: 25px auto;
     padding: 10px;
 }
 
-/* BOX */
+/* EACH ROW (IMPORTANT FIX) */
+.row {
+    display: grid;
+    grid-template-columns: 160px 1.4fr 1fr;
+    gap: 20px;
+    align-items: center;   /* 🔥 KEY: perfect vertical alignment */
+    margin-bottom: 25px;
+}
+
+/* PHOTO */
+.row img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* TEXT BOX */
 .box {
     background: white;
-    padding: 18px;
+    padding: 16px 18px;
     border-radius: 10px;
     box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-    margin-bottom: 18px;
 }
 
 /* HEADINGS */
@@ -62,63 +75,34 @@ h2 {
     margin-top: 0;
 }
 
-/* =========================
-   LEFT: PHOTOS (FIXED)
-   ========================= */
-
-.photo-col {
-    display: flex;
-    flex-direction: column;
-    gap: 28px; /* more spacing to match text blocks */
-}
-
-/* IMPORTANT FIX: no cropping */
-.photo-col img {
-    width: 100%;
-    max-width: 180px;   /* slightly smaller than full column */
-    height: auto;       /* preserve aspect ratio */
-    object-fit: contain; /* NO CROPPING */
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    margin: 0 auto;     /* center images */
-}
-
-/* =========================
-   MIDDLE TEXT
-   ========================= */
-
-.person {
-    margin-left: 10px;
-    margin-bottom: 18px; /* IMPORTANT: more vertical spacing */
-    line-height: 1.6;
-}
-
-.person a {
+/* LINKS */
+a {
     color: #1f2a44;
     text-decoration: none;
     font-weight: normal;
 }
 
-.person a:hover {
+a:hover {
     text-decoration: underline;
 }
 
-/* =========================
-   ALUMNI
-   ========================= */
-
+/* ALUMNI */
 .alumni {
-    line-height: 1.8; /* more breathing space */
+    background: white;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    line-height: 1.7;
 }
 
 /* RESPONSIVE */
-@media (max-width: 1000px) {
-    .container {
+@media (max-width: 900px) {
+    .row {
         grid-template-columns: 1fr;
     }
 
-    .photo-col img {
-        max-width: 250px;
+    .row img {
+        width: 60%;
     }
 }
 </style>
@@ -126,12 +110,10 @@ h2 {
 
 <body>
 
-<!-- HEADER -->
 <div class="header">
     <h1>Team</h1>
 </div>
 
-<!-- NAV -->
 <div class="nav">
     <a href="index.html">Home</a>
     <a href="bio.html">Bio</a>
@@ -141,91 +123,92 @@ h2 {
     <a href="contact.html">Contact</a>
 </div>
 
-<!-- MAIN -->
 <div class="container">
 
-    <!-- LEFT: PHOTOS -->
-    <div class="photo-col">
-        <img src="chao.jpg" alt="Chao Xu">
-        <img src="michelle.jpg" alt="Michelle Åhlén">
-        <img src="xueying.png" alt="Xueying Kong">
-        <img src="yiyang.jpg" alt="Yi Yang">
-        <img src="zixuan.jpg" alt="Zixuan Ding">
+<!-- PI -->
+<div class="row">
+    <img src="chao.jpg">
+    <div class="box">
+        <h2>Principal Investigator</h2>
+        <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N16-1826">
+            Assoc. Prof. Chao Xu
+        </a>
     </div>
+    <div></div>
+</div>
 
-    <!-- MIDDLE: CURRENT MEMBERS -->
-    <div>
-
-        <div class="box">
-            <h2>Principal Investigator</h2>
-            <div class="person">
-                <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N16-1826" target="_blank">
-                    Assoc. Prof. Chao Xu
-                </a>
-            </div>
-        </div>
-
-        <div class="box">
-            <h2>Researcher</h2>
-            <div class="person">
-                <a href="https://www.uu.se/kontakt-och-organisation/personal?query=N17-115" target="_blank">
-                    Dr. Michelle Åhlén
-                </a><br>
-                PhD 2021, Uppsala University
-            </div>
-        </div>
-
-        <div class="box">
-            <h2>Postdoctor</h2>
-
-            <div class="person">
-                <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N17-2175" target="_blank">
-                    Dr. Xueying Kong
-                </a><br>
-                PhD 2024, Uppsala University
-            </div>
-
-            <div class="person">
-                <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N26-99" target="_blank">
-                    Dr. Yi Yang
-                </a><br>
-                PhD 2025, Fudan University
-            </div>
-        </div>
-
-        <div class="box">
-            <h2>PhD Student</h2>
-            <div class="person">
-                <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N24-2422" target="_blank">
-                    Zixuan Ding
-                </a><br>
-                MS 2024, KTH Royal Institute of Technology
-            </div>
-        </div>
-
+<!-- Researcher -->
+<div class="row">
+    <img src="michelle.jpg">
+    <div class="box">
+        <h2>Researcher</h2>
+        <a href="https://www.uu.se/kontakt-och-organisation/personal?query=N17-115">
+            Dr. Michelle Åhlén
+        </a><br>
+        PhD 2021, Uppsala University
     </div>
+    <div></div>
+</div>
 
-    <!-- RIGHT: ALUMNI -->
-    <div>
-
-        <div class="box">
-            <h2>Alumni</h2>
-
-            <div class="alumni">
-                Dr. Shengyang Zhou (PhD 2018–2021, PI @ Sichuan University)<br><br>
-                Dr. Xueying Kong (PhD 2020–2024, Postdoc @ Uppsala University)<br><br>
-                Dr. Kasper Eliasson (PhD 2021–2025)<br><br>
-                Dr. Samson Afewerki (Researcher 2024–2025, PI @ UAE University)<br><br>
-                Yu Pan (Visiting PhD 2023–2024)<br><br>
-                Shan Jiang (Visiting PhD 2023–2024)<br><br>
-                Simanjit Singh (MSc 2022)<br><br>
-                Beyar Abdulla (MSc 2020)<br><br>
-                Viktor Sanderyd (MSc 2018)
-            </div>
-
-        </div>
-
+<!-- Postdoc 1 -->
+<div class="row">
+    <img src="xueying.png">
+    <div class="box">
+        <h2>Postdoctor</h2>
+        <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N17-2175">
+            Dr. Xueying Kong
+        </a><br>
+        PhD 2024
     </div>
+    <div></div>
+</div>
+
+<!-- Postdoc 2 -->
+<div class="row">
+    <img src="yiyang.jpg">
+    <div class="box">
+        <h2>Postdoctor</h2>
+        <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N26-99">
+            Dr. Yi Yang
+        </a><br>
+        PhD 2025, Fudan University
+    </div>
+    <div></div>
+</div>
+
+<!-- PhD -->
+<div class="row">
+    <img src="zixuan.jpg">
+    <div class="box">
+        <h2>PhD Student</h2>
+        <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N24-2422">
+            Zixuan Ding
+        </a><br>
+        MS 2024, KTH Royal Institute of Technology
+    </div>
+    <div></div>
+</div>
+
+<!-- ALUMNI (spans right column only) -->
+<div class="row">
+    <div></div>
+
+    <div></div>
+
+    <div class="alumni">
+        <h2>Alumni</h2>
+
+        Dr. Shengyang Zhou (PhD 2018–2021, PI @ Sichuan University)<br><br>
+        Dr. Xueying Kong (PhD 2020–2024, Postdoc @ Uppsala University)<br><br>
+        Dr. Kasper Eliasson (PhD 2021–2025)<br><br>
+        Dr. Samson Afewerki (Researcher 2024–2025, PI @ UAE University)<br><br>
+        Yu Pan (Visiting PhD 2023–2024)<br><br>
+        Shan Jiang (Visiting PhD 2023–2024)<br><br>
+        Simanjit Singh (MSc 2022)<br><br>
+        Beyar Abdulla (MSc 2020)<br><br>
+        Viktor Sanderyd (MSc 2018)
+    </div>
+</div>
 
 </div>
 
