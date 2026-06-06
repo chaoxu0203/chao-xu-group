@@ -35,20 +35,23 @@ body {
     font-weight: bold;
 }
 
-/* MAIN CONTAINER */
+/* MAIN 3-COLUMN LAYOUT */
 .container {
-    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.3fr 1.1fr;
+    gap: 20px;
+    max-width: 1200px;
     margin: 25px auto;
     padding: 10px;
 }
 
-/* SECTION BOX */
+/* BOX */
 .box {
     background: white;
     padding: 18px;
     border-radius: 10px;
     box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 /* HEADINGS */
@@ -59,49 +62,46 @@ h2 {
     margin-top: 0;
 }
 
-/* MEMBER ROW (KEY FIX) */
-.member {
-    display: flex;
-    align-items: center;   /* IMPORTANT: aligns photo with text */
-    gap: 15px;
-    margin-bottom: 14px;
-}
-
-/* SMALLER PHOTO (FIXED MATCHING) */
-.member img {
-    width: 45px;
-    height: 45px;
+/* LEFT PHOTOS (LARGER, CLEAN) */
+.photo-col img {
+    width: 100%;
+    height: 140px;
     object-fit: cover;
-    border-radius: 6px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-/* TEXT */
-.info {
-    line-height: 1.4;
+/* MEMBER TEXT */
+.person {
+    margin-left: 10px;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
-.info a {
+.person a {
     color: #1f2a44;
     text-decoration: none;
     font-weight: normal;
 }
 
-.info a:hover {
+.person a:hover {
     text-decoration: underline;
 }
 
-/* ALUMNI TEXT */
+/* ALUMNI */
 .alumni {
     line-height: 1.6;
-    margin-left: 5px;
 }
 
 /* RESPONSIVE */
-@media (max-width: 700px) {
-    .member {
-        flex-direction: column;
-        align-items: flex-start;
+@media (max-width: 1000px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-col img {
+        height: auto;
     }
 }
 </style>
@@ -124,29 +124,33 @@ h2 {
     <a href="contact.html">Contact</a>
 </div>
 
-<!-- CONTENT -->
+<!-- MAIN -->
 <div class="container">
 
-    <!-- PI -->
-    <div class="box">
-        <h2>Principal Investigator</h2>
-        <div class="member">
-            <img src="Chao Xu bio photo.jpg">
-            <div class="info">
+    <!-- LEFT: PHOTOS -->
+    <div class="photo-col">
+        <img src="Chao Xu bio photo.jpg" alt="Chao Xu">
+        <img src="michelle.jpg" alt="Michelle Åhlén">
+        <img src="xueying.png" alt="Xueying Kong">
+        <img src="yiyang.jpg" alt="Yi Yang">
+        <img src="zixuan.jpg" alt="Zixuan Ding">
+    </div>
+
+    <!-- MIDDLE: CURRENT MEMBERS -->
+    <div>
+
+        <div class="box">
+            <h2>Principal Investigator</h2>
+            <div class="person">
                 <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N16-1826" target="_blank">
                     Assoc. Prof. Chao Xu
                 </a>
             </div>
         </div>
-    </div>
 
-    <!-- RESEARCHER -->
-    <div class="box">
-        <h2>Researcher</h2>
-
-        <div class="member">
-            <img src="michelle.jpg">
-            <div class="info">
+        <div class="box">
+            <h2>Researcher</h2>
+            <div class="person">
                 <a href="https://www.uu.se/kontakt-och-organisation/personal?query=N17-115" target="_blank">
                     Dr. Michelle Åhlén
                 </a><br>
@@ -154,64 +158,54 @@ h2 {
             </div>
         </div>
 
-    </div>
+        <div class="box">
+            <h2>Postdoctor</h2>
 
-    <!-- POSTDOC -->
-    <div class="box">
-        <h2>Postdoctor</h2>
-
-        <div class="member">
-            <img src="xueying.png">
-            <div class="info">
+            <div class="person">
                 <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N17-2175" target="_blank">
                     Dr. Xueying Kong
                 </a><br>
-                PhD 2024
+                PhD 2024, Uppsala University
             </div>
-        </div>
 
-        <div class="member">
-            <img src="yiyang.jpg">
-            <div class="info">
+            <div class="person">
                 <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N26-99" target="_blank">
                     Dr. Yi Yang
                 </a><br>
-                PhD 2025
+                PhD 2025, Fudan University
             </div>
         </div>
 
-    </div>
-
-    <!-- PHD -->
-    <div class="box">
-        <h2>PhD Student</h2>
-
-        <div class="member">
-            <img src="zixuan.jpg">
-            <div class="info">
+        <div class="box">
+            <h2>PhD Student</h2>
+            <div class="person">
                 <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N24-2422" target="_blank">
                     Zixuan Ding
                 </a><br>
-                MS 2024
+                MS 2024, KTH Royal Institute of Technology
             </div>
         </div>
 
     </div>
 
-    <!-- ALUMNI -->
-    <div class="box">
-        <h2>Alumni</h2>
+    <!-- RIGHT: ALUMNI -->
+    <div>
 
-        <div class="alumni">
-            Dr. Shengyang Zhou (PhD 2018–2021, PI @ Sichuan University)<br><br>
-            Dr. Xueying Kong (PhD 2020–2024, Postdoc @ Uppsala University)<br><br>
-            Dr. Kasper Eliasson (PhD 2021–2025)<br><br>
-            Dr. Samson Afewerki (Researcher 2024–2025, PI @ UAE University)<br><br>
-            Yu Pan (Visiting PhD 2023–2024)<br><br>
-            Shan Jiang (Visiting PhD 2023–2024)<br><br>
-            Simanjit Singh (MSc 2022)<br><br>
-            Beyar Abdulla (MSc 2020)<br><br>
-            Viktor Sanderyd (MSc 2018)
+        <div class="box">
+            <h2>Alumni</h2>
+
+            <div class="alumni">
+                Dr. Shengyang Zhou (PhD 2018–2021, PI @ Sichuan University)<br><br>
+                Dr. Xueying Kong (PhD 2020–2024, Postdoc @ Uppsala University)<br><br>
+                Dr. Kasper Eliasson (PhD 2021–2025)<br><br>
+                Dr. Samson Afewerki (Researcher 2024–2025, PI @ UAE University)<br><br>
+                Yu Pan (Visiting PhD 2023–2024)<br><br>
+                Shan Jiang (Visiting PhD 2023–2024)<br><br>
+                Simanjit Singh (MSc 2022)<br><br>
+                Beyar Abdulla (MSc 2020)<br><br>
+                Viktor Sanderyd (MSc 2018)
+            </div>
+
         </div>
 
     </div>
