@@ -35,7 +35,7 @@ body {
     font-weight: bold;
 }
 
-/* MAIN LAYOUT: 3 COLUMNS */
+/* MAIN LAYOUT */
 .container {
     display: grid;
     grid-template-columns: 0.8fr 1.4fr 1fr;
@@ -45,22 +45,23 @@ body {
     padding: 10px;
 }
 
-/* LEFT COLUMN (PHOTOS ONLY) */
+/* LEFT PHOTO COLUMN */
 .photo-col {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
 
+/* ✅ FIX: NO COMPRESSION */
 .photo-col img {
     width: 100%;
-    height: 120px;
-    object-fit: cover;
+    height: auto;              /* key fix */
+    object-fit: contain;       /* prevent distortion */
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-/* MIDDLE + RIGHT BOX STYLE */
+/* BOX STYLE */
 .box {
     background: white;
     padding: 18px;
@@ -69,6 +70,7 @@ body {
     margin-bottom: 15px;
 }
 
+/* HEADINGS */
 h2 {
     color: #1f2a44;
     border-bottom: 2px solid #eee;
@@ -76,7 +78,7 @@ h2 {
     margin-top: 0;
 }
 
-/* TEXT PERSON */
+/* TEXT BLOCK */
 .person {
     margin-left: 10px;
     line-height: 1.5;
@@ -98,10 +100,6 @@ h2 {
 @media (max-width: 1000px) {
     .container {
         grid-template-columns: 1fr;
-    }
-
-    .photo-col img {
-        height: 200px;
     }
 }
 </style>
@@ -127,13 +125,13 @@ h2 {
 <!-- MAIN -->
 <div class="container">
 
-    <!-- LEFT: PHOTOS ONLY -->
+    <!-- LEFT: PHOTOS -->
     <div class="photo-col">
-        <img src="Chao Xu bio photo.jpg">
-        <img src="michelle.jpg">
-        <img src="xueying.png">
-        <img src="yiyang.jpg">
-        <img src="zixuan.jpg">
+        <img src="chao_xu_bio_photo.jpg" alt="Chao Xu">
+        <img src="michelle.jpg" alt="Michelle Åhlén">
+        <img src="xueying.png" alt="Xueying Kong">
+        <img src="yiyang.jpg" alt="Yi Yang">
+        <img src="zixuan.jpg" alt="Zixuan Ding">
     </div>
 
     <!-- MIDDLE: CURRENT MEMBERS -->
@@ -160,6 +158,7 @@ h2 {
 
         <div class="box">
             <h2>Postdoctor</h2>
+
             <div class="person">
                 <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N17-2175" target="_blank">
                     Dr. Xueying Kong
@@ -193,41 +192,15 @@ h2 {
         <div class="box">
             <h2>Alumni</h2>
 
-            <div class="person">
-                Dr. Shengyang Zhou (PhD 2018–2021, PI @ Sichuan University)
-            </div>
-
-            <div class="person">
-                Dr. Xueying Kong (PhD 2020–2024, Postdoc @ Uppsala University)
-            </div>
-
-            <div class="person">
-                Dr. Kasper Eliasson (PhD 2021–2025)
-            </div>
-
-            <div class="person">
-                Dr. Samson Afewerki (Researcher 2024–2025, PI @ UAE University)
-            </div>
-
-            <div class="person">
-                Yu Pan (Visiting PhD 2023–2024)
-            </div>
-
-            <div class="person">
-                Shan Jiang (Visiting PhD 2023–2024)
-            </div>
-
-            <div class="person">
-                Simanjit Singh (MSc 2022)
-            </div>
-
-            <div class="person">
-                Beyar Abdulla (MSc 2020)
-            </div>
-
-            <div class="person">
-                Viktor Sanderyd (MSc 2018)
-            </div>
+            <div class="person">Dr. Shengyang Zhou (PhD 2018–2021, PI @ Sichuan University)</div>
+            <div class="person">Dr. Xueying Kong (PhD 2020–2024, Postdoc @ Uppsala University)</div>
+            <div class="person">Dr. Kasper Eliasson (PhD 2021–2025)</div>
+            <div class="person">Dr. Samson Afewerki (Researcher 2024–2025, PI @ UAE University)</div>
+            <div class="person">Yu Pan (Visiting PhD 2023–2024)</div>
+            <div class="person">Shan Jiang (Visiting PhD 2023–2024)</div>
+            <div class="person">Simanjit Singh (MSc 2022)</div>
+            <div class="person">Beyar Abdulla (MSc 2020)</div>
+            <div class="person">Viktor Sanderyd (MSc 2018)</div>
 
         </div>
 
