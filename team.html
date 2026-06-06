@@ -35,11 +35,11 @@ body {
     font-weight: bold;
 }
 
-/* MAIN 3-COLUMN LAYOUT */
+/* MAIN LAYOUT */
 .container {
     display: grid;
-    grid-template-columns: 0.9fr 1.3fr 1.1fr;
-    gap: 20px;
+    grid-template-columns: 0.95fr 1.3fr 1.1fr;
+    gap: 22px;
     max-width: 1200px;
     margin: 25px auto;
     padding: 10px;
@@ -51,7 +51,7 @@ body {
     padding: 18px;
     border-radius: 10px;
     box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 /* HEADINGS */
@@ -62,21 +62,35 @@ h2 {
     margin-top: 0;
 }
 
-/* LEFT PHOTOS (LARGER, CLEAN) */
-.photo-col img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 14px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+/* =========================
+   LEFT: PHOTOS (FIXED)
+   ========================= */
+
+.photo-col {
+    display: flex;
+    flex-direction: column;
+    gap: 28px; /* more spacing to match text blocks */
 }
 
-/* MEMBER TEXT */
+/* IMPORTANT FIX: no cropping */
+.photo-col img {
+    width: 100%;
+    max-width: 180px;   /* slightly smaller than full column */
+    height: auto;       /* preserve aspect ratio */
+    object-fit: contain; /* NO CROPPING */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    margin: 0 auto;     /* center images */
+}
+
+/* =========================
+   MIDDLE TEXT
+   ========================= */
+
 .person {
     margin-left: 10px;
-    line-height: 1.5;
-    margin-bottom: 10px;
+    margin-bottom: 18px; /* IMPORTANT: more vertical spacing */
+    line-height: 1.6;
 }
 
 .person a {
@@ -89,9 +103,12 @@ h2 {
     text-decoration: underline;
 }
 
-/* ALUMNI */
+/* =========================
+   ALUMNI
+   ========================= */
+
 .alumni {
-    line-height: 1.6;
+    line-height: 1.8; /* more breathing space */
 }
 
 /* RESPONSIVE */
@@ -101,7 +118,7 @@ h2 {
     }
 
     .photo-col img {
-        height: auto;
+        max-width: 250px;
     }
 }
 </style>
