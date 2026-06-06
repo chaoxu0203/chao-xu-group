@@ -12,7 +12,6 @@ body {
     color: #222;
 }
 
-/* HEADER */
 .header {
     background: #1f2a44;
     color: white;
@@ -20,7 +19,6 @@ body {
     text-align: center;
 }
 
-/* NAV */
 .nav {
     background: white;
     padding: 12px;
@@ -35,14 +33,12 @@ body {
     font-weight: bold;
 }
 
-/* PAGE CONTAINER */
 .container {
     max-width: 900px;
     margin: 20px auto;
     padding: 10px;
 }
 
-/* NEWS BOX */
 .news-item {
     background: white;
     padding: 15px;
@@ -52,17 +48,25 @@ body {
     line-height: 1.6;
     font-size: 15px;
 }
+
+/* Make full news text clickable but clean */
+.news-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <div class="header">
     <h1>News</h1>
 </div>
 
-<!-- NAV -->
 <div class="nav">
     <a href="index.html">Home</a>
     <a href="research.html">Research</a>
@@ -71,27 +75,36 @@ body {
     <a href="contact.html">Contact</a>
 </div>
 
-<!-- CONTENT -->
 <div class="container">
 
     <div class="news-item">
-        📰 Chao and Michelle have received a Vinnova feasibility study grant within the Cirkularitet – FFI program, together with their industrial partner Catacon Recycling AB, focusing on the recycling of critical metals from end-of-life vehicles.
+        📰 <a href="https://www.vinnova.se/p/hallbar-atervinning-av-kritiska-metaller-fran-uttjanta-fordon-med-porosa-organiska-sorbenter/" target="_blank">
+        Chao and Michelle have received a Vinnova feasibility study grant within the Cirkularitet – FFI program, together with their industrial partner Catacon Recycling AB, focusing on the recycling of critical metals from end-of-life vehicles.
+        </a>
     </div>
 
     <div class="news-item">
-        📰 Chao attended MOF2026 in New Orleans and gave a talk on “Green and Scalable Routes for the Synthesis and Processing of Porous Organic Frameworks.”
+        📰 <a href="https://na.eventscloud.com/website/86715/home/" target="_blank">
+        Chao attended MOF2026 in New Orleans and gave a talk on “Green and Scalable Routes for the Synthesis and Processing of Porous Organic Frameworks.”
+        </a>
     </div>
 
     <div class="news-item">
-        📰 Dr. Yi Yang has joined the group as a postdoctoral researcher. Welcome!
+        📰 <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N26-99" target="_blank">
+        Dr. Yi Yang has joined the group as a postdoctoral researcher. Welcome!
+        </a>
     </div>
 
     <div class="news-item">
-        📰 Our invited Perspective on biobased porous organic polymers has been published in Chemical Science.
+        📰 <a href="https://pubs.rsc.org/en/content/articlelanding/2026/sc/d5sc08149a" target="_blank">
+        Our invited Perspective on biobased porous organic polymers has been published in Chemical Science.
+        </a>
     </div>
 
     <div class="news-item">
-        📰 Our study on aqueous and surfactant-free synthesis of nanoscale covalent organic frameworks has been published in Angewandte Chemie.
+        📰 <a href="https://onlinelibrary.wiley.com/doi/10.1002/anie.202523595" target="_blank">
+        Our study on aqueous and surfactant-free synthesis of nanoscale covalent organic frameworks has been published in Angewandte Chemie.
+        </a>
     </div>
 
 </div>
