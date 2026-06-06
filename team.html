@@ -1,1 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Team - Chao Xu Research Group</title>
 
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #f6f7fb;
+    color: #222;
+}
+
+/* HEADER */
+.header {
+    background: #1f2a44;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+/* NAV */
+.nav {
+    background: white;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #1f2a44;
+    font-weight: bold;
+}
+
+/* MAIN LAYOUT */
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 10px;
+}
+
+/* LEFT PHOTO AREA */
+.left {
+    flex: 1;
+}
+
+.group-photo {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+/* RIGHT CONTENT */
+.right {
+    flex: 1.2;
+}
+
+/* BOX STYLE */
+.box {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
+}
+
+/* HEADINGS */
+h2 {
+    color: #1f2a44;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+/* ROLE STYLE */
+.role-title {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.person {
+    margin-left: 10px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>Team</h1>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="bio.html">Bio</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<!-- MAIN -->
+<div class="container">
+
+    <!-- LEFT: PHOTO SPACE -->
+    <div class="left">
+        <img src="group_photo.jpg" alt="Group Photo" class="group-photo">
+    </div>
+
+    <!-- RIGHT: TEAM INFO -->
+    <div class="right">
+
+        <div class="box">
+            <h2>Principal Investigator</h2>
+            <div class="person">
+                Assoc. Prof. Chao Xu
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>Researcher</h2>
+            <div class="person">
+                Dr. Michelle Åhlén
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>Postdoctoral Researchers</h2>
+            <div class="person">
+                Dr. Xueying Kong<br>
+                Dr. Yi Yang
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>PhD Student</h2>
+            <div class="person">
+                Zixuan Ding
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
