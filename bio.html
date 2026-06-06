@@ -7,49 +7,56 @@
 <style>
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 40px;
+    margin: 0;
     background: #f6f7fb;
     color: #222;
 }
 
-h1 {
-    color: #1f2a44;
+/* HEADER */
+.header {
+    background: #1f2a44;
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
 }
 
-h2 {
-    margin-top: 25px;
-    color: #1f2a44;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
+.header h1 {
+    margin: 0;
 }
 
-.info-block {
-    background: white;
-    padding: 18px 20px;
-    margin-top: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+/* NAV */
+.nav {
+    background: #ffffff;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
 }
 
-/* links — IMPORTANT: no bold */
-a {
-    color: #1f2a44;
+.nav a {
+    margin: 0 14px;
     text-decoration: none;
-    font-weight: normal;
+    color: #1f2a44;
+    font-weight: bold;
 }
 
-a:hover {
-    text-decoration: underline;
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 10px;
 }
 
-/* layout */
+/* MAIN CARD */
 .profile {
     display: flex;
     gap: 25px;
-    align-items: flex-start;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
 }
 
-/* left side */
+/* LEFT PHOTO */
 .profile-left {
     width: 220px;
     flex-shrink: 0;
@@ -61,85 +68,127 @@ a:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-/* right side */
+/* RIGHT TEXT */
 .profile-right {
     flex: 1;
     line-height: 1.6;
 }
 
+/* NAME */
 .name {
     font-size: 22px;
     font-weight: bold;
     color: #1f2a44;
     margin-bottom: 8px;
 }
+
+/* LINKS */
+a {
+    color: #1f2a44;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* SECTIONS */
+h2 {
+    margin-top: 25px;
+    color: #1f2a44;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* LIST */
+ul {
+    line-height: 1.7;
+}
 </style>
 </head>
 
 <body>
 
-<h1>Biography</h1>
-
-<div class="info-block profile">
-
-    <!-- LEFT: PHOTO -->
-    <div class="profile-left">
-        <img src="chao_xu_bio_photo.jpg" alt="Chao Xu">
-    </div>
-
-    <!-- RIGHT: TEXT -->
-    <div class="profile-right">
-
-        <div class="name">
-    <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N16-1826" target="_blank">
-        Chao Xu
-    </a>
+<!-- HEADER -->
+<div class="header">
+    <h1>Biography</h1>
 </div>
 
-        <div>
-            Associate Professor<br>
-            Division of Nanotechnology and Functional Materials<br>
-            Department of Materials Science and Engineering<br>
-            Uppsala University, Sweden
+<!-- NAV -->
+<div class="nav">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="team.html">Team</a>
+    <a href="publications.html">Publications</a>
+    <a href="bio.html">Bio</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <div class="profile">
+
+        <!-- LEFT: PHOTO -->
+        <div class="profile-left">
+            <img src="chao_xu_bio_photo.jpg" alt="Chao Xu">
         </div>
 
-        <h2>Education & Career</h2>
+        <!-- RIGHT: TEXT -->
+        <div class="profile-right">
 
-        <p>
-        Chao Xu earned his PhD in Materials Chemistry from Stockholm University in 2015 under the supervision of
-        <a href="https://www.su.se/profiles/n/nhedi" target="_blank">Prof. Niklas Hedin</a>.
-        </p>
-
-        <p>
-        Following a brief postdoctoral period in the same group, he joined Uppsala University in 2016 as a postdoctoral researcher under the supervision of
-        <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N94-2074" target="_blank">Prof. Maria Strømme</a>, and subsequently held a researcher position from 2018.
-        </p>
-
-        <p>
-        In 2021, he was appointed as a tenure-track Assistant Professor at Uppsala University and was promoted to Associate Professor in 2025.
-        He obtained his Docent degree in Engineering Science with specialization in Nanotechnology and Functional Materials in 2024.
-        </p>
-
-        <h2>Awards & Recognition</h2>
-
-        <ul>
-            <li>
-                <a href="https://www.kungahuset.se/download/18.44e3ea617a09053813324c/1623938811456/50-%C3%A5rsfonden%20utdelning%202017.pdf" target="_blank">
-                King Carl XVI Gustaf’s 50th Birthday Fund for Science, Technology, and the Environment
+            <div class="name">
+                <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N16-1826" target="_blank">
+                    Chao Xu
                 </a>
-            </li>
-            <li>
-                <a href="https://gustafssonsstiftelser.se/chao-xu-teknisk-fysik-uu/" target="_blank">
-                Göran Gustafsson Prize (UU/KTH)
-                </a>
-            </li>
-        </ul>
+            </div>
 
-        <h2>Research Grants</h2>
+            <div>
+                Associate Professor<br>
+                Division of Nanotechnology and Functional Materials<br>
+                Department of Materials Science and Engineering<br>
+                Uppsala University, Sweden
+            </div>
 
-        <p>
-        Chao Xu has received several research grants from the Swedish Research Council, Formas, the Swedish Energy Agency, Vinnova, STINT, the Göran Gustafsson Foundation, and the ÅForsk Foundation, with a total amount of approximately 25 MSEK as principal investigator.
-        </p>
+            <h2>Education & Career</h2>
+
+            <p>
+            Chao Xu earned his PhD in Materials Chemistry from Stockholm University in 2015 under the supervision of
+            <a href="https://www.su.se/profiles/n/nhedi" target="_blank">Prof. Niklas Hedin</a>.
+            </p>
+
+            <p>
+            Following a brief postdoctoral period in the same group, he joined Uppsala University in 2016 as a postdoctoral researcher under the supervision of
+            <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N94-2074" target="_blank">Prof. Maria Strømme</a>, and subsequently held a researcher position from 2018.
+            </p>
+
+            <p>
+            In 2021, he was appointed as a tenure-track Assistant Professor at Uppsala University and was promoted to Associate Professor in 2025.
+            He obtained his Docent degree in Engineering Science with specialization in Nanotechnology and Functional Materials in 2024.
+            </p>
+
+            <h2>Awards & Recognition</h2>
+
+            <ul>
+                <li>
+                    <a href="https://www.kungahuset.se/download/18.44e3ea617a09053813324c/1623938811456/50-%C3%A5rsfonden%20utdelning%202017.pdf" target="_blank">
+                    King Carl XVI Gustaf’s 50th Birthday Fund for Science, Technology, and the Environment
+                    </a>
+                </li>
+                <li>
+                    <a href="https://gustafssonsstiftelser.se/chao-xu-teknisk-fysik-uu/" target="_blank">
+                    Göran Gustafsson Prize (UU/KTH)
+                    </a>
+                </li>
+            </ul>
+
+            <h2>Research Grants</h2>
+
+            <p>
+            Chao Xu has received several research grants from the Swedish Research Council, Formas, the Swedish Energy Agency, Vinnova, STINT, the Göran Gustafsson Foundation, and the ÅForsk Foundation, with a total amount of approximately 25 MSEK as principal investigator.
+            </p>
+
+        </div>
 
     </div>
 
