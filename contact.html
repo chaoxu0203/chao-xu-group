@@ -7,81 +7,154 @@
 <style>
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 40px;
+    margin: 0;
     background: #f6f7fb;
     color: #222;
 }
 
-h1 {
-    color: #1f2a44;
+/* HEADER */
+.header {
+    background: #1f2a44;
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
 }
 
-h2 {
-    margin-top: 40px;
-    color: #1f2a44;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
+.header h1 {
+    margin: 0;
 }
 
-.info-block {
+/* NAV */
+.nav {
+    background: #ffffff;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav a {
+    margin: 0 14px;
+    text-decoration: none;
+    color: #1f2a44;
+    font-weight: bold;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 10px;
+}
+
+/* CARD */
+.box {
     background: white;
-    padding: 18px 20px;
-    margin-top: 15px;
+    padding: 18px;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    line-height: 1.7;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
 }
 
-/* clean links */
-.info-block a {
+/* HEADINGS */
+h2 {
+    color: #1f2a44;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+/* LINKS */
+a {
     color: #1f2a44;
     text-decoration: none;
-    font-weight: normal;
 }
 
-.info-block a:hover {
+a:hover {
     text-decoration: underline;
+}
+
+/* TEXT */
+.info-line {
+    line-height: 1.7;
+    margin-top: 6px;
 }
 </style>
 </head>
 
 <body>
 
-<h1>Contact</h1>
-
-<h2>Affiliation</h2>
-<div class="info-block">
-<a href="https://www.uu.se/en/department/materials-science-and-engineering/research/divisions/nanotechnology-and-functional-materials" target="_blank">
-<strong>
-Division of Nanotechnology and Functional Materials<br>
-Department of Materials Science and Engineering<br>
-Uppsala University
-</strong>
-</a>
+<!-- HEADER -->
+<div class="header">
+    <h1>Contact</h1>
 </div>
 
-<h2>Contact Information</h2>
-<div class="info-block">
-<strong>E-mail:</strong>
-<a href="mailto:chao.xu@angstrom.uu.se">chao.xu@angstrom.uu.se</a><br>
-
-<strong>Telephone:</strong> +46 18 471 32 30<br>
-<strong>Visiting address:</strong> Ångströmlaboratoriet, Regementsvägen 10, House 3, Floor 1<br>
-<strong>Postal address:</strong> Box 35, 751 03 Uppsala, Sweden
+<!-- NAV -->
+<div class="nav">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="team.html">Team</a>
+    <a href="publications.html">Publications</a>
+    <a href="bio.html">Bio</a>
+    <a href="contact.html">Contact</a>
 </div>
 
-<h2>Follow us</h2>
-<div class="info-block">
-<strong>LinkedIn:</strong>
-<a href="https://www.linkedin.com/in/chao-xu-672a5662/" target="_blank">
-https://www.linkedin.com/in/chao-xu-672a5662/
-</a>
-<br>
+<!-- CONTENT -->
+<div class="container">
 
-<strong>X (Twitter):</strong>
-<a href="https://x.com/xuchao2266" target="_blank">
-https://x.com/xuchao2266
-</a>
+    <!-- AFFILIATION -->
+    <div class="box">
+        <h2>Affiliation</h2>
+
+        <a href="https://www.uu.se/en/department/materials-science-and-engineering/research/divisions/nanotechnology-and-functional-materials" target="_blank">
+            <strong>
+            Division of Nanotechnology and Functional Materials<br>
+            Department of Materials Science and Engineering<br>
+            Uppsala University
+            </strong>
+        </a>
+    </div>
+
+    <!-- CONTACT INFO -->
+    <div class="box">
+        <h2>Contact Information</h2>
+
+        <div class="info-line">
+            <strong>E-mail:</strong>
+            <a href="mailto:chao.xu@angstrom.uu.se">chao.xu@angstrom.uu.se</a>
+        </div>
+
+        <div class="info-line">
+            <strong>Telephone:</strong> +46 18 471 32 30
+        </div>
+
+        <div class="info-line">
+            <strong>Visiting address:</strong> Ångströmlaboratoriet, Regementsvägen 10, House 3, Floor 1
+        </div>
+
+        <div class="info-line">
+            <strong>Postal address:</strong> Box 35, 751 03 Uppsala, Sweden
+        </div>
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="box">
+        <h2>Follow us</h2>
+
+        <div class="info-line">
+            <strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/chao-xu-672a5662/" target="_blank">
+                https://www.linkedin.com/in/chao-xu-672a5662/
+            </a>
+        </div>
+
+        <div class="info-line">
+            <strong>X (Twitter):</strong>
+            <a href="https://x.com/xuchao2266" target="_blank">
+                https://x.com/xuchao2266
+            </a>
+        </div>
+    </div>
+
 </div>
 
 </body>
