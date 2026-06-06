@@ -7,20 +7,48 @@
 <style>
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 40px;
+    margin: 0;
     background: #f6f7fb;
     color: #222;
 }
 
-/* Title */
-h1 {
-    color: #1f2a44;
-    margin-bottom: 10px;
+/* HEADER */
+.header {
+    background: #1f2a44;
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
 }
 
-/* Scholar line */
+.header h1 {
+    margin: 0;
+}
+
+/* NAV */
+.nav {
+    background: #ffffff;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav a {
+    margin: 0 14px;
+    text-decoration: none;
+    color: #1f2a44;
+    font-weight: bold;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 10px;
+}
+
+/* SCHOLAR LINE */
 .scholar-link {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     font-size: 16px;
 }
 
@@ -34,7 +62,7 @@ h1 {
     text-decoration: underline;
 }
 
-/* Year headers */
+/* YEAR HEADER */
 h2 {
     margin-top: 40px;
     color: #1f2a44;
@@ -42,13 +70,13 @@ h2 {
     padding-bottom: 5px;
 }
 
-/* Paper card (modern look upgrade) */
+/* PAPER CARD */
 .paper {
     background: white;
     padding: 18px 20px;
     margin-bottom: 14px;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
     line-height: 1.6;
     transition: transform 0.15s ease;
 }
@@ -57,13 +85,13 @@ h2 {
     transform: translateY(-2px);
 }
 
-/* Author highlight */
+/* AUTHOR NAME */
 .name {
     font-weight: bold;
     text-decoration: underline;
 }
 
-/* DOI link */
+/* LINKS */
 a {
     color: #1f2a44;
     text-decoration: none;
@@ -74,7 +102,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Optional tags (NEW feature) */
+/* TAGS */
 .tag {
     display: inline-block;
     background: #e9eef7;
@@ -90,70 +118,88 @@ a:hover {
 
 <body>
 
-<h1>Publications</h1>
-
-<div class="scholar-link">
-    📖 <a href="https://scholar.google.com/citations?user=JznnMVAAAAAJ&hl=en" target="_blank">
-        Google Scholar
-    </a>
-    &nbsp;|&nbsp;
-    🔬 <a href="https://www.researchgate.net/profile/Chao_Xu34/research" target="_blank">
-        ResearchGate
-    </a>
+<!-- HEADER -->
+<div class="header">
+    <h1>Publications</h1>
 </div>
 
-<!-- ================= 2026 ================= -->
-<h2>2026</h2>
-
-<div class="paper">
-<span class="tag">COFs</span>
-Xueying Kong, Samson Afewerki, Yu Pan, Ping Huang, <span class="name">Chao Xu</span>*<br>
-Aqueous and Surfactant-Free Synthesis of Nanoscale Covalent Organic Frameworks<br>
-<i>Angewandte Chemie International Edition</i>, 2026, 65, e23595<br>
-<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202523595" target="_blank">DOI</a>
+<!-- NAV -->
+<div class="nav">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="team.html">Team</a>
+    <a href="publications.html">Publications</a>
+    <a href="bio.html">Bio</a>
+    <a href="contact.html">Contact</a>
 </div>
 
-<div class="paper">
-<span class="tag">POPs</span>
-Duan Li*, Tianhui Shi, Sirui Ran, Lei Zeng, <span class="name">Chao Xu</span>*<br>
-Rapid Sintering of Porous Organic Polymer Powders into Mechanically Strong Monoliths for Efficient CO₂ Capture<br>
-<i>Advanced Functional Materials</i>, 2026, 36, e14603<br>
-<a href="https://doi.org/10.1002/adfm.202514603" target="_blank">DOI</a>
-</div>
+<!-- CONTENT -->
+<div class="container">
 
-<div class="paper">
-<span class="tag">Bio-POPs</span>
-Michelle Åhlén, Samson Afewerki, <span class="name">Chao Xu</span>*<br>
-A Sustainable Approach to Biobased Porous Organic Frameworks and Their Composites<br>
-<i>Chemical Science</i>, 2026, 17, 712–724<br>
-<a href="https://doi.org/10.1039/D5SC08149A" target="_blank">DOI</a>
-</div>
+    <div class="scholar-link">
+        📖 <a href="https://scholar.google.com/citations?user=JznnMVAAAAAJ&hl=en" target="_blank">
+            Google Scholar
+        </a>
+        &nbsp;|&nbsp;
+        🔬 <a href="https://www.researchgate.net/profile/Chao_Xu34/research" target="_blank">
+            ResearchGate
+        </a>
+    </div>
 
-<!-- ================= 2025 ================= -->
-<h2>2025</h2>
+    <!-- ================= 2026 ================= -->
+    <h2>2026</h2>
 
-<div class="paper">
-<span class="tag">COF Membranes</span>
-Kasper Eliasson, Fanfan Jiang, Michelle Åhlén, Maria Strømme, <span class="name">Chao Xu</span>*<br>
-Scalable and Versatile Fabrication of Free-standing Covalent Organic Framework Membranes with Tunable Microstructure for Molecular Separation<br>
-<i>Journal of the American Chemical Society</i>, 2025, 147, 32, 29271–29281<br>
-<a href="https://doi.org/10.1021/jacs.5c08788" target="_blank">DOI</a>
-</div>
+    <div class="paper">
+        <span class="tag">COFs</span>
+        Xueying Kong, Samson Afewerki, Yu Pan, Ping Huang, <span class="name">Chao Xu</span>*<br>
+        Aqueous and Surfactant-Free Synthesis of Nanoscale Covalent Organic Frameworks<br>
+        <i>Angewandte Chemie International Edition</i>, 2026, 65, e23595<br>
+        <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202523595" target="_blank">DOI</a>
+    </div>
 
-<div class="paper">
-<span class="tag">COFs</span>
-Michelle Åhlén, Xueying Kong, Wei Zhao, Félix Zamora, <span class="name">Chao Xu</span>*<br>
-Overcoming Boundaries: Towards the Ambient Aqueous Synthesis of Covalent Organic Frameworks<br>
-<i>Angewandte Chemie International Edition</i>, 2025, 64, e202425426<br>
-<a href="https://doi.org/10.1002/anie.202425426" target="_blank">DOI</a>
-</div>
+    <div class="paper">
+        <span class="tag">POPs</span>
+        Duan Li*, Tianhui Shi, Sirui Ran, Lei Zeng, <span class="name">Chao Xu</span>*<br>
+        Rapid Sintering of Porous Organic Polymer Powders into Mechanically Strong Monoliths for Efficient CO₂ Capture<br>
+        <i>Advanced Functional Materials</i>, 2026, 36, e14603<br>
+        <a href="https://doi.org/10.1002/adfm.202514603" target="_blank">DOI</a>
+    </div>
 
-<div class="paper">
-<span class="tag">MOFs</span>
-Shan Jiang, Xueying Kong, Hongli Chen, Weibing Wu, Huining Xiao, Maria Strømme, <span class="name">Chao Xu</span>*<br>
-Laser-etched Flexible Microsupercapacitors Based on Nanocellulose and Conductive Metal–Organic Frameworks<br>
-<i>Chemical Engineering Journal</i>, 2025, 509, 161059<br>
-<a href="https://doi.org/10.1016/j.cej.2025.161059" target="_blank">DOI</a>
+    <div class="paper">
+        <span class="tag">Bio-POPs</span>
+        Michelle Åhlén, Samson Afewerki, <span class="name">Chao Xu</span>*<br>
+        A Sustainable Approach to Biobased Porous Organic Frameworks and Their Composites<br>
+        <i>Chemical Science</i>, 2026, 17, 712–724<br>
+        <a href="https://doi.org/10.1039/D5SC08149A" target="_blank">DOI</a>
+    </div>
+
+    <!-- ================= 2025 ================= -->
+    <h2>2025</h2>
+
+    <div class="paper">
+        <span class="tag">COF Membranes</span>
+        Kasper Eliasson, Fanfan Jiang, Michelle Åhlén, Maria Strømme, <span class="name">Chao Xu</span>*<br>
+        Scalable and Versatile Fabrication of Free-standing Covalent Organic Framework Membranes with Tunable Microstructure for Molecular Separation<br>
+        <i>Journal of the American Chemical Society</i>, 2025, 147, 32, 29271–29281<br>
+        <a href="https://doi.org/10.1021/jacs.5c08788" target="_blank">DOI</a>
+    </div>
+
+    <div class="paper">
+        <span class="tag">COFs</span>
+        Michelle Åhlén, Xueying Kong, Wei Zhao, Félix Zamora, <span class="name">Chao Xu</span>*<br>
+        Overcoming Boundaries: Towards the Ambient Aqueous Synthesis of Covalent Organic Frameworks<br>
+        <i>Angewandte Chemie International Edition</i>, 2025, 64, e202425426<br>
+        <a href="https://doi.org/10.1002/anie.202425426" target="_blank">DOI</a>
+    </div>
+
+    <div class="paper">
+        <span class="tag">MOFs</span>
+        Shan Jiang, Xueying Kong, Hongli Chen, Weibing Wu, Huining Xiao, Maria Strømme, <span class="name">Chao Xu</span>*<br>
+        Laser-etched Flexible Microsupercapacitors Based on Nanocellulose and Conductive Metal–Organic Frameworks<br>
+        <i>Chemical Engineering Journal</i>, 2025, 509, 161059<br>
+        <a href="https://doi.org/10.1016/j.cej.2025.161059" target="_blank">DOI</a>
+    </div>
+
 </div>
 
 </body>
