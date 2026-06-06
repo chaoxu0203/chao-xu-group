@@ -7,49 +7,121 @@
 <style>
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 40px;
+    margin: 0;
     background: #f6f7fb;
     color: #222;
 }
 
-h1 {
-    color: #1f2a44;
+/* HEADER */
+.header {
+    background: #1f2a44;
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
 }
 
+.header h1 {
+    margin: 0;
+}
+
+/* NAV */
+.nav {
+    background: #ffffff;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav a {
+    margin: 0 14px;
+    text-decoration: none;
+    color: #1f2a44;
+    font-weight: bold;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 10px;
+}
+
+/* BOX STYLE */
+.box {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
+}
+
+/* HEADINGS */
 h2 {
-    margin-top: 40px;
     color: #1f2a44;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #eee;
     padding-bottom: 5px;
+    margin-top: 0;
 }
 
+/* LIST STYLE */
 ul {
-    line-height: 1.6;
+    line-height: 1.7;
     margin-top: 10px;
 }
 
+/* LINKS */
+a {
+    color: #1f2a44;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 </style>
 </head>
 
 <body>
 
-<h1>Research</h1>
+<!-- HEADER -->
+<div class="header">
+    <h1>Research</h1>
+</div>
 
-<h2>Materials</h2>
-<ul>
-    <li>Covalent Organic Frameworks (COFs)</li>
-    <li>Porous Organic Polymers (POPs)</li>
-    <li>Metal-Organic Frameworks (MOFs)</li>
-</ul>
+<!-- NAV -->
+<div class="nav">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="team.html">Team</a>
+    <a href="publications.html">Publications</a>
+    <a href="bio.html">Bio</a>
+    <a href="contact.html">Contact</a>
+</div>
 
-<h2>Applications</h2>
-<ul>
-    <li>Gas separation</li>
-    <li>Carbon capture and conversion</li>
-    <li>Critical metal recovery</li>
-    <li>Nanofiltration</li>
-    <li>Energy harvesting and storage</li>
-</ul>
+<!-- CONTENT -->
+<div class="container">
+
+    <div class="box">
+        <h2>Materials</h2>
+        <ul>
+            <li>Covalent Organic Frameworks (COFs)</li>
+            <li>Porous Organic Polymers (POPs)</li>
+            <li>Metal-Organic Frameworks (MOFs)</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>Applications</h2>
+        <ul>
+            <li>Gas separation</li>
+            <li>Carbon capture and conversion</li>
+            <li>Critical metal recovery</li>
+            <li>Nanofiltration</li>
+            <li>Energy harvesting and storage</li>
+        </ul>
+    </div>
+
+</div>
 
 </body>
 </html>
