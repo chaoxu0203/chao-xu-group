@@ -79,6 +79,35 @@ a:hover {
     border-radius: 10px;
     margin-top: 12px;
 }
+
+/* PUBLICATION LAYOUT */
+.pub-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 18px;
+}
+
+.pub-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pub-grid-2 a {
+    background: #f3f5fa;
+    padding: 8px 10px;
+    border-radius: 8px;
+    display: block;
+    font-size: 14px;
+}
+
+.pub-row a {
+    background: #f3f5fa;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    display: inline-block;
+}
 </style>
 </head>
 
@@ -99,139 +128,130 @@ a:hover {
 
 <div class="container">
 
-    <!-- OVERVIEW -->
-    <div class="section">
-        <h2>Overview</h2>
-        <p>
-            Our research focuses on the green synthesis and engineering of porous organic materials, including metal–organic frameworks (MOFs), covalent organic frameworks (COFs), and porous organic polymers (POPs), for energy and environmental applications.
-        </p>
-    </div>
-
-    <!-- 1 -->
-    <div class="section">
-        <h2>1. Green synthesis of COFs</h2>
-
-        <p>
-            We have developed an ambient aqueous synthesis strategy for various COFs, eliminating the need for conventional solvothermal conditions that rely on toxic organic solvents, high temperatures, and high pressures. This approach provides a sustainable and scalable route to functional COF materials.
-        </p>
-
-        <p><strong>Selected publications:</strong></p>
-
-        <p>
-            <a href="https://onlinelibrary.wiley.com/doi/10.1002/anie.202523595" target="_blank">
-                <i>Angew. Chem. Int. Ed.</i>, <b>2026</b>, 65, e23595
-            </a>
-        </p>
-
-        <p>
-            <a href="https://doi.org/10.1002/anie.202425426" target="_blank">
-                <i>Angew. Chem. Int. Ed.</i>, <b>2025</b>, 64, e202425426
-            </a>
-        </p>
-
-        <p>
-            <a href="https://doi.org/10.1021/jacs.3c10691" target="_blank">
-                <i>J. Am. Chem. Soc.</i>, <b>2024</b>, 146, 742
-            </a>
-        </p>
-
-        <img src="research1.png" alt="Green synthesis of COFs">
-    </div>
-
-    <!-- 2 -->
-    <div class="section">
-        <h2>2. Cost-effective and scalable synthesis of porous organic materials</h2>
-
-        <p>
-            Porous organic materials such as COFs and POPs are typically synthesized from expensive organic monomers, which limits their large-scale and industrial deployment. We have developed imine- and aminal-linked POPs using cost-effective diamine and dialdehyde building blocks, including biomass-derived precursors, enabling significant cost reduction (down to ~10 USD per kg) and offering a viable pathway toward scalable production.
-        </p>
-
-        <p><strong>Selected publications:</strong></p>
-
-        <p>
-            <a href="https://doi.org/10.1002/anie.202305225" target="_blank">
-                <i>Angew. Chem. Int. Ed.</i>, <b>2023</b>, 62, e202305225
-            </a>
-        </p>
-
-        <p>
-            <a href="https://doi.org/10.1039/D4GC03494E" target="_blank">
-                <i>Green Chem.</i>, <b>2024</b>, 26, 10960
-            </a>
-        </p>
-
-        <p>
-            <a href="https://doi.org/10.1039/D5SC08149A" target="_blank">
-                <i>Chem. Sci.</i>, <b>2026</b>, 17, 712
-            </a>
-        </p>
-
-        <img src="research2.jpg" alt="Scalable synthesis of porous organic materials">
-    </div>
-
-    <div class="section">
-    <h2>3. Nanoengineering of porous organic materials</h2>
-
-    <p>
-        Porous organic materials are typically obtained as insoluble and infusible powders, which severely limits their processability. We have developed nanoengineering strategies to transform MOFs, COFs, and POPs into freestanding membranes, monoliths, gels, and flexible nanopapers, thereby significantly facilitating their practical applications.
-    </p>
-
-    <p><strong>Selected publications:</strong></p>
-
-    <p>
-        <a href="https://pubs.acs.org/doi/10.1021/jacs.5c08788" target="_blank">
-            <i>J. Am. Chem. Soc.</i>, <b>2025</b>, 147, 29271
-        </a>
-    </p>
-
-    <p>
-        <a href="https://doi.org/10.1002/anie.202318387" target="_blank">
-            <i>Angew. Chem. Int. Ed.</i>, <b>2024</b>, 63, e202318387
-        </a>
-    </p>
-
-    <p>
-        <a href="https://doi.org/10.1002/adfm.202514603" target="_blank">
-            <i>Adv. Funct. Mater.</i>, <b>2026</b>, 35, e14603
-        </a>
-    </p>
-
-    <p>
-        <a href="https://doi.org/10.1039/D0EE02730H" target="_blank">
-            <i>Energy Environ. Sci</i>, <b>2021</b>, 14, 900
-        </a>
-    </p>
-
-    <p>
-        <a href="https://doi.org/10.1021/acsnano.9b04670" target="_blank">
-            <i>ACS Nano</i>, <b>2019</b>, 13, 9578
-        </a>
-    </p>
-
-    <img src="research3c.jpg" alt="Nanoengineering of porous organic materials">
-</div>
-
-    <!-- 4 -->
-    <div class="section">
-        <h2>4. Application development of porous organic materials</h2>
-        <p>
-            Building on advances in green synthesis and nanoengineering, we have developed applications of porous organic materials in energy and environmental technologies, including carbon capture and conversion, noble metal recovery, nanofiltration, energy harvesting and storage, and gas sensing, aiming to contribute to a more sustainable future.
-        </p>
-    </div>
-
-<!-- Acknowledgement -->
+<!-- OVERVIEW -->
 <div class="section">
-
-    <h2>Acknowledgement</h2>
-
-    <p>
-        We gratefully acknowledge the Swedish Research Council, Formas, the Swedish Energy Agency, Vinnova, STINT, the Göran Gustafsson Foundation, and the ÅForsk Foundation for their financial support of our research activities.
-    </p>
-
-    <img src="fundingagency.jpg" alt="Funding agencies logos"
-         style="max-width:100%; height:auto; margin-top:10px; border-radius:10px;">
+<h2>Overview</h2>
+<p>
+Our research focuses on the green synthesis and engineering of porous organic materials, including metal–organic frameworks (MOFs), covalent organic frameworks (COFs), and porous organic polymers (POPs), for energy and environmental applications.
+</p>
 </div>
-    
+
+<!-- 1 -->
+<div class="section">
+<h2>1. Green synthesis of COFs</h2>
+
+<p>
+We have developed an ambient aqueous synthesis strategy for various COFs, eliminating the need for conventional solvothermal conditions that rely on toxic organic solvents, high temperatures, and high pressures. This approach provides a sustainable and scalable route to functional COF materials.
+</p>
+
+<p><strong>Selected publications:</strong></p>
+
+<div class="pub-grid-2">
+
+<a href="https://onlinelibrary.wiley.com/doi/10.1002/anie.202523595" target="_blank">
+<i>Angew. Chem. Int. Ed.</i>, <b>2026</b>, 65, e23595
+</a>
+
+<a href="https://doi.org/10.1002/anie.202425426" target="_blank">
+<i>Angew. Chem. Int. Ed.</i>, <b>2025</b>, 64, e202425426
+</a>
+
+<a href="https://doi.org/10.1021/jacs.3c10691" target="_blank">
+<i>J. Am. Chem. Soc.</i>, <b>2024</b>, 146, 742
+</a>
+
+</div>
+
+<img src="research1.png" alt="Green synthesis of COFs">
+</div>
+
+<!-- 2 -->
+<div class="section">
+<h2>2. Cost-effective and scalable synthesis of porous organic materials</h2>
+
+<p>
+Porous organic materials such as COFs and POPs are typically synthesized from expensive organic monomers, which limits their large-scale and industrial deployment. We have developed imine- and aminal-linked POPs using cost-effective diamine and dialdehyde building blocks, including biomass-derived precursors, enabling significant cost reduction (down to ~10 USD per kg) and offering a viable pathway toward scalable production.
+</p>
+
+<p><strong>Selected publications:</strong></p>
+
+<div class="pub-row">
+
+<a href="https://doi.org/10.1002/anie.202305225" target="_blank">
+<i>Angew. Chem. Int. Ed.</i>, <b>2023</b>, 62, e202305225
+</a>
+
+<a href="https://doi.org/10.1039/D4GC03494E" target="_blank">
+<i>Green Chem.</i>, <b>2024</b>, 26, 10960
+</a>
+
+<a href="https://doi.org/10.1039/D5SC08149A" target="_blank">
+<i>Chem. Sci.</i>, <b>2026</b>, 17, 712
+</a>
+
+</div>
+
+<img src="research2.jpg" alt="Scalable synthesis">
+</div>
+
+<!-- 3 -->
+<div class="section">
+<h2>3. Nanoengineering of porous organic materials</h2>
+
+<p>
+Porous organic materials are typically obtained as insoluble and infusible powders, which severely limits their processability. We have developed nanoengineering strategies to transform MOFs, COFs, and POPs into freestanding membranes, monoliths, gels, and flexible nanopapers, thereby significantly facilitating their practical applications.
+</p>
+
+<p><strong>Selected publications:</strong></p>
+
+<div class="pub-grid-2">
+
+<a href="https://pubs.acs.org/doi/10.1021/jacs.5c08788" target="_blank">
+<i>J. Am. Chem. Soc.</i>, <b>2025</b>, 147, 29271
+</a>
+
+<a href="https://doi.org/10.1002/anie.202318387" target="_blank">
+<i>Angew. Chem. Int. Ed.</i>, <b>2024</b>, 63, e202318387
+</a>
+
+<a href="https://doi.org/10.1002/adfm.202514603" target="_blank">
+<i>Adv. Funct. Mater.</i>, <b>2026</b>, 35, e14603
+</a>
+
+<a href="https://doi.org/10.1039/D0EE02730H" target="_blank">
+<i>Energy Environ. Sci.</i>, <b>2021</b>, 14, 900
+</a>
+
+<a href="https://doi.org/10.1021/acsnano.9b04670" target="_blank">
+<i>ACS Nano</i>, <b>2019</b>, 13, 9578
+</a>
+
+</div>
+
+<img src="research3c.jpg" alt="Nanoengineering">
+</div>
+
+<!-- 4 -->
+<div class="section">
+<h2>4. Application development of porous organic materials</h2>
+
+<p>
+Building on advances in green synthesis and nanoengineering, we have developed applications of porous organic materials in energy and environmental technologies, including carbon capture and conversion, noble metal recovery, nanofiltration, energy harvesting and storage, and gas sensing, aiming to contribute to a more sustainable future.
+</p>
+
+</div>
+
+<!-- ACKNOWLEDGEMENT -->
+<div class="section">
+<h2>Acknowledgement</h2>
+
+<p>
+We gratefully acknowledge the Swedish Research Council, Formas, the Swedish Energy Agency, Vinnova, STINT, the Göran Gustafsson Foundation, and the ÅForsk Foundation for their financial support of our research activities.
+</p>
+
+<img src="fundingagency.jpg" alt="Funding agencies">
+</div>
+
 </div>
 
 </body>
