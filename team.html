@@ -35,9 +35,7 @@ body {
     font-weight: bold;
 }
 
-/* =========================
-   MAIN 3-COLUMN LAYOUT
-   ========================= */
+/* GRID */
 .container {
     display: grid;
     grid-template-columns: 160px 1.4fr 1fr;
@@ -47,21 +45,9 @@ body {
     padding: 10px;
 }
 
-/* =========================
-   ROW SYSTEM (KEY FIX)
-   ========================= */
-.row {
-    display: contents;
-}
-
-/* =========================
-   LEFT: PHOTOS
-   ========================= */
+/* LEFT PHOTOS */
 .photo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 25px; /* spacing matches text blocks */
+    margin-bottom: 25px;
 }
 
 .photo img {
@@ -71,28 +57,24 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-/* =========================
-   MIDDLE: MEMBER INFO
-   ========================= */
+/* MIDDLE */
 .member {
     background: white;
-    padding: 16px 18px;
+    padding: 14px 18px;
     border-radius: 10px;
     box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-
     margin-bottom: 25px;
-    min-height: 140px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* IMPORTANT: keep height stable */
+    line-height: 1.4;
 }
 
 .member h2 {
-    margin-top: 0;
+    margin: 0 0 6px 0;
     color: #1f2a44;
     border-bottom: 2px solid #eee;
-    padding-bottom: 5px;
+    padding-bottom: 4px;
+    font-size: 16px;
 }
 
 /* LINKS */
@@ -106,15 +88,12 @@ a:hover {
     text-decoration: underline;
 }
 
-/* =========================
-   RIGHT: ALUMNI
-   ========================= */
+/* RIGHT ALUMNI */
 .alumni {
     background: white;
     padding: 16px;
     border-radius: 10px;
     box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-
     position: sticky;
     top: 20px;
     line-height: 1.7;
@@ -122,17 +101,6 @@ a:hover {
 
 .alumni h2 {
     margin-top: 0;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1000px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-
-    .alumni {
-        position: static;
-    }
 }
 </style>
 </head>
@@ -154,7 +122,7 @@ a:hover {
 
 <div class="container">
 
-    <!-- LEFT COLUMN: PHOTOS -->
+    <!-- LEFT PHOTOS -->
     <div>
         <div class="photo"><img src="chao.jpg"></div>
         <div class="photo"><img src="michelle.jpg"></div>
@@ -163,67 +131,51 @@ a:hover {
         <div class="photo"><img src="zixuan.jpg"></div>
     </div>
 
-    <!-- MIDDLE COLUMN: MEMBERS -->
+    <!-- MIDDLE TEXT (FIXED ALIGNMENT STRUCTURE) -->
     <div>
 
         <div class="member">
             <h2>Principal Investigator</h2>
-            <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N16-1826">
-                Assoc. Prof. Chao Xu
-            </a>
+            Assoc. Prof. Chao Xu
         </div>
 
         <div class="member">
             <h2>Researcher</h2>
-            <a href="https://www.uu.se/kontakt-och-organisation/personal?query=N17-115">
-                Dr. Michelle Åhlén
-            </a><br>
-            (PhD 2021, Uppsala University)
+            Dr. Michelle Åhlén<br>
+            PhD 2021, Uppsala University
         </div>
 
         <div class="member">
             <h2>Postdoctor</h2>
-            <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N17-2175">
-                Dr. Xueying Kong
-            </a><br>
-            PhD 2024, Uppsala University<br><br>
-
-            <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N26-99">
-                Dr. Yi Yang
-            </a><br>
-            (PhD 2025, Fudan University)
+            Dr. Xueying Kong<br>
+            PhD 2024, Uppsala University
+            <br><br>
+            Dr. Yi Yang<br>
+            PhD 2025, Fudan University
         </div>
 
         <div class="member">
             <h2>PhD Student</h2>
-            <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N24-2422">
-                Zixuan Ding
-            </a><br>
-            (MS 2024, KTH Royal Institute of Technology)
+            Zixuan Ding<br>
+            MS 2024, KTH Royal Institute of Technology
         </div>
 
     </div>
 
-    <!-- RIGHT COLUMN: ALUMNI -->
+    <!-- RIGHT ALUMNI -->
     <div class="alumni">
         <h2>Alumni</h2>
 
-        <a href="https://mse.scu.edu.cn/info/1017/6725.htm">Dr. Shengyang Zhou</a>
-        (PhD 2018–2021, PI @ Sichuan University)<br><br>
-
-        <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N17-2175">Dr. Xueying Kong</a>
-        (PhD 2020–2024, Postdoc @ Uppsala University)<br><br>
-
+        Dr. Shengyang Zhou (PhD 2018–2021, PI @ Sichuan University)<br><br>
+        Dr. Xueying Kong (PhD 2020–2024, Postdoc @ Uppsala University)<br><br>
         Dr. Kasper Eliasson (PhD 2021–2025)<br><br>
-
-        <a href="https://research.uaeu.ac.ae/en/persons/samson-afewerki/">Dr. Samson Afewerki</a>
-        (Researcher 2024–2025, PI @ UAE University)<br><br>
-
+        Dr. Samson Afewerki (Researcher 2024–2025, PI @ UAE University)<br><br>
         Yu Pan (Visiting PhD 2023–2024)<br><br>
         Shan Jiang (Visiting PhD 2023–2024)<br><br>
         Simanjit Singh (MSc 2022)<br><br>
         Beyar Abdulla (MSc 2020)<br><br>
         Viktor Sanderyd (MSc 2018)
+
     </div>
 
 </div>
