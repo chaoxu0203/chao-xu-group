@@ -15,7 +15,6 @@
 <title>Chao Xu Research Group</title>
 
 <style>
-/* 合并重复的 body 样式，并做细微调整 */
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -23,11 +22,10 @@ body {
     color: #222;
 }
 
-/* HEADER */
 .header {
     background: #1f2a44;
     color: white;
-    padding: 25px 20px;  /* 上下内边距稍减，更紧凑 */
+    padding: 25px 20px;
     text-align: center;
 }
 
@@ -37,14 +35,13 @@ body {
 }
 
 .header p {
-    margin-top: 4px;    /* 减小上边距，缩短行间距 */
-    margin-bottom: 2px; /* 控制下边距 */
+    margin-top: 4px;
+    margin-bottom: 2px;
     font-size: 17px;
     opacity: 0.9;
-    line-height: 1.3;   /* 行高调小，文字更紧凑 */
+    line-height: 1.3;
 }
 
-/* NAV */
 .nav {
     background: #ffffff;
     padding: 12px;
@@ -59,18 +56,19 @@ body {
     font-weight: bold;
 }
 
-/* MAIN LAYOUT */
 .container {
     display: flex;
     gap: 20px;
     max-width: 1400px;
     margin: 20px auto;
     padding: 10px;
+    align-items: stretch;  /* 关键：让左右两栏等高 */
 }
 
-/* LEFT + RIGHT */
 .left {
     flex: 1;
+    display: flex;
+    flex-direction: column;  /* 让子元素在列方向排列 */
 }
 
 .right {
@@ -80,7 +78,6 @@ body {
     gap: 20px;
 }
 
-/* BOX STYLE */
 .box {
     background: white;
     padding: 16px;
@@ -88,7 +85,18 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-/* SECTION TITLE */
+/* 左侧的 box 也撑满 */
+.left .box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 让图片填满剩余空间，底部不留白 */
+.left .box .group-photo:last-child {
+    margin-bottom: 0;
+}
+
 h2 {
     font-size: 18px;
     color: #1f2a44;
@@ -97,7 +105,6 @@ h2 {
     margin-top: 0;
 }
 
-/* GROUP PHOTOS */
 .group-photo {
     width: 100%;
     border-radius: 12px;
@@ -105,20 +112,17 @@ h2 {
     margin-bottom: 12px;
 }
 
-/* NEWS */
 .news-item {
     padding: 8px 0;
     border-bottom: 1px solid #eee;
     font-size: 14px;
 }
 
-/* PUBLICATION IMAGE */
 .paper-img {
     width: 100%;
     border-radius: 10px;
 }
 
-/* MORE LINK */
 .more-link {
     margin-top: 10px;
     text-align: right;
@@ -134,7 +138,6 @@ h2 {
     text-decoration: underline;
 }
 
-/* RESPONSIVE */
 @media (max-width: 1000px) {
     .container {
         flex-direction: column;
@@ -145,49 +148,18 @@ h2 {
 
 <body>
 
-<!-- HEADER -->
 <div class="header">
-
-    <div style="
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        gap:20px;          /* 左右间距略微缩小 */
-        max-width:1000px;
-        margin:0 auto;
-    ">
-
-        <!-- IMAGE -->
-        <img src="pop.jpg" alt="Group Banner"
-             style="
-                height:130px;      /* 图片高度稍微调小，平衡视觉 */
-                width:auto;
-                border-radius:10px;
-                object-fit:cover;
-             ">
-
-        <!-- TEXT -->
+    <div style="display:flex; align-items:center; justify-content:center; gap:20px; max-width:1000px; margin:0 auto;">
+        <img src="pop.jpg" alt="Group Banner" style="height:130px; width:auto; border-radius:10px; object-fit:cover;">
         <div style="text-align:left;">
-            <h1 style="margin:0; font-size:34px; line-height:1.2;">
-                Chao Xu's Research Group
-            </h1>
-            <!-- 调整段落间距：上下边距减小，行高紧凑 -->
-            <p style="
-                margin-top: 4px;
-                margin-bottom: 0;
-                font-size: 17px;
-                opacity: 0.9;
-                line-height: 1.3;
-            ">
+            <h1 style="margin:0; font-size:34px; line-height:1.2;">Chao Xu's Research Group</h1>
+            <p style="margin-top:4px; margin-bottom:0; font-size:17px; opacity:0.9; line-height:1.3;">
                 on Functional Porous Materials @Uppsala University
             </p>
         </div>
-
     </div>
-
 </div>
 
-<!-- NAV -->
 <div class="nav">
     <a href="index.html">Home</a>
     <a href="bio.html">Bio</a>
@@ -197,65 +169,30 @@ h2 {
     <a href="contact.html">Contact</a>
 </div>
 
-<!-- MAIN -->
 <div class="container">
-
-    <!-- LEFT: GROUP PHOTOS -->
     <div class="left box">
         <h2>Our Group</h2>
-
         <img src="group_photo.jpg" alt="Group Photo" class="group-photo">
-
-        <img src="group1.jpg" alt="Group Photo 2" class="group-photo">
+        <img src="group1.jpg" alt="Group Photo 2" class="group-photo" style="margin-bottom:0;">
     </div>
 
-    <!-- RIGHT -->
     <div class="right">
-
-        <!-- NEWS -->
         <div class="box">
-    <h2>News</h2>
-    <div class="news-item">
-      📰
-    2026.08 Our studies on structural regulation of porphyrin-based nanoCOFs for advanced chemiresistive NO₂ sensing have been published in <a href="https://doi.org/10.1002/anie.2684732" target="_blank" rel="noopener noreferrer">Angew Chem</a> and <a href="https://doi.org/10.1002/sus2.70086" target="_blank" rel="noopener noreferrer">SusMat</a>.
-</div>
-<div class="news-item">
-    📰
-    2026.06 Our paper "Crosslinking of Linear Polyimines into Aminal-Linked Porous Organic Polymers for C2 Hydrocarbon/Methane Separation" has been published in <a href="https://onlinelibrary.wiley.com/doi/10.1002/anie.5692086" target="_blank" rel="noopener noreferrer">Angewandte Chemie International Edition</a>.
-</div>
-<div class="news-item">
-    📰
-   2026.06 Congratulations to Michelle for receiving a major research grant from ÅForsk Foundation for the project "Micropollutant Removal from Wastewater Using Sustainable and Functional Porous Organic Polymers".
-</div>
-<div class="news-item">
-    📰 <a href="https://www.vinnova.se/p/hallbar-atervinning-av-kritiska-metaller-fran-uttjanta-fordon-med-porosa-organiska-sorbenter/" target="_blank">
-        2026.06 Chao and Michelle received a Vinnova feasibility study grant within the Cirkularitet – FFI program, together with their industrial partner Catacon Recycling AB, focusing on the recycling of critical metals from end-of-life vehicles.
-    </a>
-</div>
-<div class="news-item">
-    📰 <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N26-99" target="_blank">
-        2026.01 Dr. Yi Yang joined the group as a postdoctoral researcher. Welcome!
-    </a>
-</div>
-<div class="news-item">
-    📰 <a href="https://onlinelibrary.wiley.com/doi/10.1002/anie.202523595" target="_blank">
-        2025.12 Our study on aqueous and surfactant-free synthesis of nanoscale covalent organic frameworks was published in Angewandte Chemie.
-    </a>
-</div>
+            <h2>News</h2>
+            <div class="news-item">📰 2026.08 Our studies on structural regulation of porphyrin-based nanoCOFs for advanced chemiresistive NO₂ sensing have been published in <a href="https://doi.org/10.1002/anie.2684732" target="_blank" rel="noopener noreferrer">Angew Chem</a> and <a href="https://doi.org/10.1002/sus2.70086" target="_blank" rel="noopener noreferrer">SusMat</a>.</div>
+            <div class="news-item">📰 2026.06 Our paper "Crosslinking of Linear Polyimines into Aminal-Linked Porous Organic Polymers for C2 Hydrocarbon/Methane Separation" has been published in <a href="https://onlinelibrary.wiley.com/doi/10.1002/anie.5692086" target="_blank" rel="noopener noreferrer">Angewandte Chemie International Edition</a>.</div>
+            <div class="news-item">📰 2026.06 Congratulations to Michelle for receiving a major research grant from ÅForsk Foundation for the project "Micropollutant Removal from Wastewater Using Sustainable and Functional Porous Organic Polymers".</div>
+            <div class="news-item">📰 <a href="https://www.vinnova.se/p/hallbar-atervinning-av-kritiska-metaller-fran-uttjanta-fordon-med-porosa-organiska-sorbenter/" target="_blank">2026.06 Chao and Michelle received a Vinnova feasibility study grant within the Cirkularitet – FFI program, together with their industrial partner Catacon Recycling AB, focusing on the recycling of critical metals from end-of-life vehicles.</a></div>
+            <div class="news-item">📰 <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N26-99" target="_blank">2026.01 Dr. Yi Yang joined the group as a postdoctoral researcher. Welcome!</a></div>
+            <div class="news-item">📰 <a href="https://onlinelibrary.wiley.com/doi/10.1002/anie.202523595" target="_blank">2025.12 Our study on aqueous and surfactant-free synthesis of nanoscale covalent organic frameworks was published in Angewandte Chemie.</a></div>
+            <div class="more-link"><a href="news.html">More →</a></div>
+        </div>
 
-    <div class="more-link">
-        <a href="news.html">More →</a>
-    </div>
-</div>
-
-        <!-- PUBLICATIONS -->
         <div class="box">
             <h2>Featured Publications</h2>
             <img src="papers.jpg" alt="Featured Publications" class="paper-img">
         </div>
-
     </div>
-
 </div>
 
 </body>
