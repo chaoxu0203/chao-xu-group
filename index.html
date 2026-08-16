@@ -9,21 +9,13 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-J1B0M6389H');
 </script>
 
 <title>Chao Xu Research Group</title>
 
 <style>
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background: #f6f7fb;
-    color: #222;
-}
-
-<style>
+/* 合并重复的 body 样式，并做细微调整 */
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -35,7 +27,7 @@ body {
 .header {
     background: #1f2a44;
     color: white;
-    padding: 35px 20px;
+    padding: 25px 20px;  /* 上下内边距稍减，更紧凑 */
     text-align: center;
 }
 
@@ -45,9 +37,11 @@ body {
 }
 
 .header p {
-    margin-top: 8px;
+    margin-top: 4px;    /* 减小上边距，缩短行间距 */
+    margin-bottom: 2px; /* 控制下边距 */
     font-size: 17px;
     opacity: 0.9;
+    line-height: 1.3;   /* 行高调小，文字更紧凑 */
 }
 
 /* NAV */
@@ -158,7 +152,7 @@ h2 {
         display:flex;
         align-items:center;
         justify-content:center;
-        gap:25px;
+        gap:20px;          /* 左右间距略微缩小 */
         max-width:1000px;
         margin:0 auto;
     ">
@@ -166,7 +160,7 @@ h2 {
         <!-- IMAGE -->
         <img src="pop.jpg" alt="Group Banner"
              style="
-                height:140px;
+                height:130px;      /* 图片高度稍微调小，平衡视觉 */
                 width:auto;
                 border-radius:10px;
                 object-fit:cover;
@@ -174,10 +168,17 @@ h2 {
 
         <!-- TEXT -->
         <div style="text-align:left;">
-            <h1 style="margin:0; font-size:34px;">
+            <h1 style="margin:0; font-size:34px; line-height:1.2;">
                 Chao Xu's Research Group
             </h1>
-            <p style="margin-top:8px; font-size:17px; opacity:0.9;">
+            <!-- 调整段落间距：上下边距减小，行高紧凑 -->
+            <p style="
+                margin-top: 4px;
+                margin-bottom: 0;
+                font-size: 17px;
+                opacity: 0.9;
+                line-height: 1.3;
+            ">
                 on Functional Porous Materials @Uppsala University
             </p>
         </div>
