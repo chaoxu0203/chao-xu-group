@@ -62,12 +62,13 @@ body {
     max-width: 1400px;
     margin: 20px auto;
     padding: 10px;
+    align-items: stretch;  /* 关键：让左右两栏等高 */
 }
 
 .left {
     flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  /* 让子元素在列方向排列 */
 }
 
 .right {
@@ -84,28 +85,17 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-/* ===== 关键修复：左侧图片自动填满 ===== */
+/* 左侧的 box 也撑满 */
 .left .box {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-.left .box .group-photo {
-    flex: 1;              /* 图片自动拉伸填满剩余空间 */
-    object-fit: cover;    /* 保持比例，裁剪多余部分 */
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-    margin-bottom: 12px;
-    min-height: 0;        /* 防止 flex 溢出 */
-}
-
+/* 让图片填满剩余空间，底部不留白 */
 .left .box .group-photo:last-child {
     margin-bottom: 0;
-    flex: 2;              /* 第二张图占更多比例，可根据喜好调整 */
 }
-/* ===================================== */
 
 h2 {
     font-size: 18px;
@@ -113,6 +103,13 @@ h2 {
     border-bottom: 2px solid #eee;
     padding-bottom: 5px;
     margin-top: 0;
+}
+
+.group-photo {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    margin-bottom: 12px;
 }
 
 .news-item {
@@ -145,10 +142,6 @@ h2 {
     .container {
         flex-direction: column;
     }
-    .left .box .group-photo {
-        flex: none;       /* 手机端恢复默认 */
-        height: auto;
-    }
 }
 </style>
 </head>
@@ -180,7 +173,7 @@ h2 {
     <div class="left box">
         <h2>Our Group</h2>
         <img src="group_photo.jpg" alt="Group Photo" class="group-photo">
-        <img src="group1.jpg" alt="Group Photo 2" class="group-photo">
+        <img src="group1.jpg" alt="Group Photo 2" class="group-photo" style="margin-bottom:0;">
     </div>
 
     <div class="right">
